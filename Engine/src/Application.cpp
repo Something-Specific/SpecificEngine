@@ -1,48 +1,25 @@
 
-#include <GL\glew.h>
-#include <GLFW\glfw3.h>
-//#include <glm\glm.hpp>
+#include "Demo\Game.h"
+#include "Core\MasterGame.h"
+#include "Core\Debug\Log.h"
 
-#include <iostream>
-
-#include "Core\Resources\ResourceLoader.h"
-#include "Core\Graphics\Texture2D.h"
-#include "Core\Graphics\Renderer.h"
-
-int main(void)
+void main(int argc, char *argv[])
 {
-	GLFWwindow* window;
+	Core::Log::Init();
+	CORE_TRACE("trace");
+	CORE_INFO("info");
+	CORE_WARN("warn");
+	CORE_ERROR("error");
+	GAME_CRITICAL("fatal");
+	
+	//Creates the game object
+	Demo::Game game = Demo::Game();
 
-	if (!glfwInit())
-		return -1;
+	//Casts it to a mastergame for the run function
+	Core::MasterGame *mGame = &game;
 
-	window = glfwCreateWindow(640, 480, "Something Specific", NULL, NULL);
+	//Calls run which will begin by initializing the game
+	mGame->Run();
+	
 
-	//Core::Graphics::Texture2D tex = Core::Resources::ResourceLoader::LoadTexture("../rsc/card_back.pn", GL_TRUE, "CardBack");
-	//Core::Graphics::Renderer renderer = Core::Graphics::Renderer();
-	//glm::vec2 pos = glm::vec2(0,0);
-
-	while (!glfwWindowShouldClose(window))
-	{
-		glClear(GL_COLOR_BUFFER_BIT);
-
-
-		glBegin(GL_TRIANGLES);
-		glVertex2f(-0.5f, -0.5f);
-		glVertex2f( 0.5f,  0.5f);
-		glVertex2f( 0.5f, -0.5f);
-
-		//renderer.Render(tex, pos);
-
-		glEnd();
-
-
-		glfwSwapBuffers(window);
-
-		glfwPollEvents();
-
-	}
-
-	glfwTerminate();
-	return 0;
 }
