@@ -12,6 +12,7 @@ namespace Demo
 	void Game::Init() 
 	{
 		Gin::Resources::ResourceLoader::LoadTexture("rsc/card_back.png", 0, "CardBack");
+		GAME_INFO("Game initialized.");
 	}
 	
 	/*
@@ -20,7 +21,6 @@ namespace Demo
 	*/
 	void Game::Update(float dt) 
 	{
-		
 	}
 
 	void Game::Render(Gin::Graphics::Renderer *renderer) 
