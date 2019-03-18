@@ -2,6 +2,7 @@
 
 #include "..\GinPch.h"
 
+
 namespace Gin
 {
 	namespace Inputs
@@ -12,8 +13,12 @@ namespace Gin
 			Keyboard();
 			~Keyboard();
 
+			bool IsKeyDown(Keys key);
+
 			void UpdateState(int key, int action);
 
+		private:
+			bool* KeyStates;
 		};
 	}
 }

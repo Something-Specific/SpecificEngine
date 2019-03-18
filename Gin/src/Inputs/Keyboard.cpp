@@ -9,19 +9,24 @@ namespace Gin
 	{
 		Keyboard::Keyboard()
 		{
-
+			KeyStates = new bool[1024];
 		}
 
 
-		void Keyboard::UpdateState(int key, int action)
+		void Keyboard::UpdateState(int key, int action) 
 		{
+			KeyStates[key] = action;
+		}
 
+		bool Keyboard::IsKeyDown(Keys key) 
+		{
+			return KeyStates[key];
 		}
 
 
 		Keyboard::~Keyboard()
 		{
-
+			delete KeyStates;
 		}
 	}
 }

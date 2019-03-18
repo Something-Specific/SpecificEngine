@@ -2,6 +2,7 @@
 
 #include "..\GinPch.h"
 
+#include "..\Maths\Vector2.h"
 #include "Texture2D.h"
 #include "Shader.h"
 
@@ -15,6 +16,10 @@ namespace Gin
 		public:
 			Renderer(Shader &shader);
 			~Renderer();
+
+			void Render(Texture2D &texture, Maths::Vector2f position);
+			void Render(Texture2D &texture, Maths::Vector2f position, Maths::Vector2i size);
+
 			void Render(Texture2D &texture, glm::vec2 position, float rotate = 0.0f, glm::vec3 color = glm::vec3(1.0f));
 			void Render(Texture2D &texture, glm::vec2 position, glm::vec2 size, float rotate = 0.0f, glm::vec3 color = glm::vec3(1.0f));
 		

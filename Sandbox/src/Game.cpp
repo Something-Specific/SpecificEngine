@@ -21,6 +21,7 @@ namespace Demo
 	*/
 	void Game::Update(float dt) 
 	{
+		
 	}
 
 	void Game::Render(Gin::Graphics::Renderer *renderer) 

@@ -7,12 +7,14 @@
 #include <functional>
 #include <fstream>
 #include <stdint.h>
+#include <stdlib.h> 
 
 
 #include <string>
 #include <sstream>
 #include <vector>
 #include <map>
+#include <set>
 #include <unordered_map>
 #include <unordered_set>
 
@@ -30,5 +32,5 @@
 #include <SOIL.h>
 
 
-
-#include "Debug\Log.h"
+#include "Debug\Macros.h"
+#include "Inputs\Keys.h"

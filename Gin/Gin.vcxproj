@@ -11,6 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\ECS\Engine.cpp" />
+    <ClCompile Include="src\ECS\System\RenderSystem.cpp" />
+    <ClCompile Include="src\ECS\Entity.cpp" />
+    <ClCompile Include="src\Debug\Assert.cpp" />
     <ClCompile Include="src\Debug\Log.cpp" />
     <ClCompile Include="src\GinPch.cpp" />
     <ClCompile Include="src\Graphics\Renderer.cpp" />
@@ -25,6 +29,26 @@
     <ClCompile Include="src\Resources\ResourceLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\ECS\Components\DisplayComponent.h" />
+    <ClInclude Include="src\ECS\Components\IdentityComponent.h" />
+    <ClInclude Include="src\ECS\Components\PositionComponent.h" />
+    <ClInclude Include="src\ECS\Components\RigidBodyComponent.h" />
+    <ClInclude Include="src\ECS\Components\ComponentType.h" />
+    <ClInclude Include="src\ECS\Components\VelocityComponent.h" />
+    <ClInclude Include="src\ECS\Contracts\IRenderableSystem.h" />
+    <ClInclude Include="src\ECS\Contracts\IUpdateableSystem.h" />
+    <ClInclude Include="src\ECS\Engine.h" />
+    <ClInclude Include="src\ECS\Nodes\Rendernode.h" />
+    <ClInclude Include="src\ECS\System\RenderSystem.h" />
+    <ClInclude Include="src\ECS\Contracts\IComponent.h" />
+    <ClInclude Include="src\ECS\Contracts\IEventManager.h" />
+    <ClInclude Include="src\ECS\Contracts\INode.h" />
+    <ClInclude Include="src\ECS\Contracts\ISystemContext.h" />
+    <ClInclude Include="src\ECS\Entity.h" />
+    <ClInclude Include="src\Debug\Assert.h" />
+    <ClInclude Include="src\Debug\Macros.h" />
+    <ClInclude Include="src\ECS\System\Systems.h" />
+    <ClInclude Include="src\Events\Delegate.h" />
     <ClInclude Include="src\Debug\Log.h" />
     <ClInclude Include="src\GinPch.h" />
     <ClInclude Include="src\Graphics\Renderer.h" />
@@ -33,11 +57,15 @@
     <ClInclude Include="src\Graphics\Texture2D.h" />
     <ClInclude Include="src\Inputs\Controller.h" />
     <ClInclude Include="src\Inputs\Keyboard.h" />
+    <ClInclude Include="src\Inputs\Keys.h" />
     <ClInclude Include="src\Inputs\Mouse.h" />
     <ClInclude Include="src\Inputs\Processor.h" />
     <ClInclude Include="src\Core\MasterGame.h" />
+    <ClInclude Include="src\Maths\Maths.h" />
     <ClInclude Include="src\Resources\ResourceLoader.h" />
     <ClInclude Include="src\Gin.h" />
+    <ClInclude Include="src\Maths\Vector2.h" />
+    <ClInclude Include="src\ECS\SystemContext.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

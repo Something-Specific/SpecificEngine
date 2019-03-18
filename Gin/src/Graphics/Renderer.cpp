@@ -46,9 +46,19 @@ namespace Gin
 			glBindVertexArray(0);
 		}
 
+		void Renderer::Render(Texture2D &texture, Maths::Vector2f position) {
+			Renderer::Render(texture, glm::vec2(position.x, position.y));
+		}
+
+		void Renderer::Render(Texture2D &texture, Maths::Vector2f position, Maths::Vector2i size) {
+			Renderer::Render(texture, glm::vec2(position.x, position.y), 
+				glm::vec2(static_cast<float>(size.x), static_cast<float>(size.y)));
+		}
+
 		void Renderer::Render(Texture2D &texture, glm::vec2 position, float rotate, glm::vec3 color)
 		{
-			Render(texture, position, glm::vec2(static_cast<float>(texture.Width), static_cast<float>(texture.Height)), rotate, color);
+			Render(texture, position, glm::vec2(static_cast<float>(texture.Width), 
+				static_cast<float>(texture.Height)), rotate, color);
 		}
 
 		void Renderer::Render(Texture2D &texture, glm::vec2 position, glm::vec2 size, float rotate, glm::vec3 color)
