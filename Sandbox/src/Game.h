@@ -4,6 +4,7 @@
 
 namespace Demo
 {
+	using namespace Gin;
 
 	class Game : public Gin::Core::MasterGame
 	{
@@ -13,6 +14,8 @@ namespace Demo
 
 	private:
 		void Init();
+
+		ECS::Engine* CoreEngine;
 	};
 
 }

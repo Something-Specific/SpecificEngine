@@ -161,9 +161,6 @@
     <ClInclude Include="src\ECS\Nodes\Rendernode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ECS\System\Systems.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\ECS\Components\ComponentType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -174,6 +171,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\ECS\Engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ECS\System\SystemTypes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

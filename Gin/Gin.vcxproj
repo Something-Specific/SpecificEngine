@@ -47,7 +47,7 @@
     <ClInclude Include="src\ECS\Entity.h" />
     <ClInclude Include="src\Debug\Assert.h" />
     <ClInclude Include="src\Debug\Macros.h" />
-    <ClInclude Include="src\ECS\System\Systems.h" />
+    <ClInclude Include="src\ECS\System\SystemTypes.h" />
     <ClInclude Include="src\Events\Delegate.h" />
     <ClInclude Include="src\Debug\Log.h" />
     <ClInclude Include="src\GinPch.h" />

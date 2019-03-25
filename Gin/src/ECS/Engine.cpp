@@ -42,6 +42,5 @@ namespace Gin {
 			RenderSystems->emplace(priority, system);
 		}
 
-
 	}
 }

@@ -18,6 +18,7 @@ namespace Gin
 
 		MasterGame::MasterGame(float width, float height)
 		{
+			CoreEngine = new ECS::Engine();
 			screen = new Screen(width, height);
 			processor = new Processor(screen->window);
 

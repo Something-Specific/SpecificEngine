@@ -4,6 +4,7 @@
 
 #include "..\Graphics\Screen.h"
 #include "..\Inputs\Processor.h"
+#include "..\ECS\Engine.h"
 
 #define FPS_REFRESH_RATE 0.25
 #define UPDATE_TIME_STEP 1666667
@@ -34,6 +35,8 @@ namespace Gin
 			virtual void Render(Graphics::Renderer *renderer) {}
 
 		protected:
+			ECS::Engine* CoreEngine;
+
 			virtual void Init() {}
 
 		private:
