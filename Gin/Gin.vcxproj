@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Events\EventManager.cpp" />
     <ClCompile Include="src\ECS\Engine.cpp" />
     <ClCompile Include="src\ECS\System\RenderSystem.cpp" />
     <ClCompile Include="src\ECS\Entity.cpp" />
@@ -29,6 +30,8 @@
     <ClCompile Include="src\Utils\Log.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Events\Event.h" />
+    <ClInclude Include="src\Events\EventManager.h" />
     <ClInclude Include="src\ECS\Components\DisplayComponent.h" />
     <ClInclude Include="src\ECS\Components\IdentityComponent.h" />
     <ClInclude Include="src\ECS\Components\PositionComponent.h" />
@@ -47,6 +50,8 @@
     <ClInclude Include="src\ECS\Entity.h" />
     <ClInclude Include="src\ECS\System\SystemTypes.h" />
     <ClInclude Include="src\Events\Delegate.h" />
+    <ClInclude Include="src\Events\Dispatcher.h" />
+    <ClInclude Include="src\Events\EventTypes.h" />
     <ClInclude Include="src\GinPch.h" />
     <ClInclude Include="src\Graphics\Renderer.h" />
     <ClInclude Include="src\Graphics\Screen.h" />
