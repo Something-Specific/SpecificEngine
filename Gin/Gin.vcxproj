@@ -14,8 +14,6 @@
     <ClCompile Include="src\ECS\Engine.cpp" />
     <ClCompile Include="src\ECS\System\RenderSystem.cpp" />
     <ClCompile Include="src\ECS\Entity.cpp" />
-    <ClCompile Include="src\Debug\Assert.cpp" />
-    <ClCompile Include="src\Debug\Log.cpp" />
     <ClCompile Include="src\GinPch.cpp" />
     <ClCompile Include="src\Graphics\Renderer.cpp" />
     <ClCompile Include="src\Graphics\Screen.cpp" />
@@ -27,6 +25,8 @@
     <ClCompile Include="src\Inputs\Processor.cpp" />
     <ClCompile Include="src\Core\MasterGame.cpp" />
     <ClCompile Include="src\Resources\ResourceLoader.cpp" />
+    <ClCompile Include="src\Utils\Assert.cpp" />
+    <ClCompile Include="src\Utils\Log.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ECS\Components\DisplayComponent.h" />
@@ -45,11 +45,8 @@
     <ClInclude Include="src\ECS\Contracts\INode.h" />
     <ClInclude Include="src\ECS\Contracts\ISystemContext.h" />
     <ClInclude Include="src\ECS\Entity.h" />
-    <ClInclude Include="src\Debug\Assert.h" />
-    <ClInclude Include="src\Debug\Macros.h" />
     <ClInclude Include="src\ECS\System\SystemTypes.h" />
     <ClInclude Include="src\Events\Delegate.h" />
-    <ClInclude Include="src\Debug\Log.h" />
     <ClInclude Include="src\GinPch.h" />
     <ClInclude Include="src\Graphics\Renderer.h" />
     <ClInclude Include="src\Graphics\Screen.h" />
@@ -66,6 +63,9 @@
     <ClInclude Include="src\Gin.h" />
     <ClInclude Include="src\Maths\Vector2.h" />
     <ClInclude Include="src\ECS\SystemContext.h" />
+    <ClInclude Include="src\Utils\Assert.h" />
+    <ClInclude Include="src\Utils\Log.h" />
+    <ClInclude Include="src\Utils\Macros.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

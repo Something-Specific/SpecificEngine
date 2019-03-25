@@ -1,7 +1,7 @@
 #pragma once
 
 //Helper functions
-#include "Debug\Log.h"
+#include "Utils\Log.h"
 #include "Graphics\Renderer.h"
 #include "Graphics\Screen.h"
 #include "Graphics\Texture2d.h"
