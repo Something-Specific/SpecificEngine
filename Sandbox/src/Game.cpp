@@ -19,12 +19,12 @@ namespace Demo
 		The update function for all game logic. This will occur at a fixed
 		delta of 60 a second.
 	*/
-	void Game::Update(float dt) 
+	void Game::Update(Gin::Inputs::Processor *processor, float dt)
 	{
 		
 	}
 
-	void Game::Render(Gin::Graphics::Renderer *renderer) 
+	void Game::Render(Gin::Graphics::Renderer *renderer, float dt) 
 	{
 		Gin::Graphics::Texture2D texture = Gin::Resources::ResourceLoader::GetTexture("CardBack");
 		renderer->Render(texture, glm::vec2(64, 64));

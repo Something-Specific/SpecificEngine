@@ -9,8 +9,8 @@ namespace Demo
 	class Game : public Gin::Core::MasterGame
 	{
 	public:
-		void Update(float dt);
-		void Render(Gin::Graphics::Renderer *renderer);
+		void Update(Gin::Inputs::Processor *processor, float dt);
+		void Render(Gin::Graphics::Renderer *renderer, float dt);
 
 	private:
 		void Init();
