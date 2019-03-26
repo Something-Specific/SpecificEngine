@@ -28,6 +28,7 @@
     <ClCompile Include="src\Resources\ResourceLoader.cpp" />
     <ClCompile Include="src\Utils\Assert.cpp" />
     <ClCompile Include="src\Utils\Log.cpp" />
+    <ClCompile Include="src\Inputs\Summoner.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Events\Event.h" />
@@ -71,6 +72,7 @@
     <ClInclude Include="src\Utils\Assert.h" />
     <ClInclude Include="src\Utils\Log.h" />
     <ClInclude Include="src\Utils\Macros.h" />
+    <ClInclude Include="src\Inputs\Summoner.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

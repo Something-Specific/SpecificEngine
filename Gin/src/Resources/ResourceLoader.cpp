@@ -2,6 +2,8 @@
 #include "..\GinPch.h"
 #include "ResourceLoader.h"
 
+#include <soil\SOIL.h>
+
 namespace Gin 
 {
 	namespace Resources 

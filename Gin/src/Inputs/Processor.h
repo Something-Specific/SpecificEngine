@@ -17,7 +17,7 @@ namespace Gin
 			Keyboard *KeyboardState;
 			Mouse *MouseState;
 
-			Processor(GLFWwindow *window);
+			Processor(/*GLFWwindow *window*/);
 			~Processor();
 
 		};

@@ -20,11 +20,12 @@ namespace Gin
 		{
 			CoreEngine = new ECS::Engine();
 			screen = new Screen(width, height);
-			processor = new Processor(screen->window);
+			summoner = new Summoner(width, height);
 
 			//In ticks 1/60 of a second.s
 			TargetTimeStep = UPDATE_TIME_STEP;
 			LastUpdateTime = high_resolution_clock::now();
+			LastRenderTime = high_resolution_clock::now();
 			LastFPSRefresh = high_resolution_clock::now();
 
 			CORE_INFO("Gin initialized.");
@@ -40,10 +41,12 @@ namespace Gin
 			Init();
 			while (!screen->ShouldClose())
 			{
+				//TODO: Not sure where this should be probably should be in some window abstraction
 				//Ready all events
 				glfwPollEvents();
 
 				//Process input
+				summoner->Update();
 
 				//Update Loop
 				auto time = high_resolution_clock::now();
@@ -55,28 +58,23 @@ namespace Gin
 					while (CumulativeDt >= TargetTimeStep)
 					{
 						auto dt = static_cast<float>(TargetTimeStep / (TICKS_IN_SECOND * 1.0));
-						Update(dt);
+						Update(summoner->processor, dt);
 						CumulativeDt -= TargetTimeStep;
 					}
 				}
 				else { //Fast as possible
-					Update(static_cast<float>(dur.count()));
+					Update(summoner->processor, static_cast<float>(dur.count()));
 				}
 				LastUpdateTime = high_resolution_clock::now();
 
 				//FPS Counter
 				FramesElapsed++;
-				dur = duration_cast<duration<double>>(LastUpdateTime - LastFPSRefresh);
+				dur = duration_cast<duration<double>>(high_resolution_clock::now() - LastFPSRefresh);
 				if (dur.count() > FPS_REFRESH_RATE)
 				{
 					double fps = FramesElapsed / dur.count();
-					//char fpsStr[20];
-					//std::sprintf(fpsStr, "Gin\tFPS%g", fps);
-
 					std::stringstream title;
 					title << "Gin - FPS: " << fps;
-
-
 					glfwSetWindowTitle(screen->window, title.str().c_str());
 					FramesElapsed = 0;
 					LastFPSRefresh = high_resolution_clock::now();
@@ -85,8 +83,9 @@ namespace Gin
 
 				//Render Loop
 				screen->Start();
-				Render(screen->renderer);
-				//renderer->Render(tex, glm::vec2(64, 64), glm::vec2(128, 128));
+				dur = duration_cast<duration<double>>(high_resolution_clock::now() - LastRenderTime);
+				Render(screen->renderer, static_cast<float>(dur.count()));
+				LastRenderTime = high_resolution_clock::now();
 				screen->Stop();
 			}
 

@@ -3,6 +3,8 @@
 #include "..\GinPch.h"
 
 #include "..\Graphics\Screen.h"
+#include "..\Graphics\Renderer.h"
+#include "..\Inputs\Summoner.h"
 #include "..\Inputs\Processor.h"
 #include "..\ECS\Engine.h"
 
@@ -22,7 +24,7 @@ namespace Gin
 		{
 		public:
 			Graphics::Screen *screen;
-			Inputs::Processor *processor;
+			Inputs::Summoner *summoner;
 
 			MasterGame(float width = 640, float height = 480);
 			~MasterGame();
@@ -31,8 +33,8 @@ namespace Gin
 			void SetTimeStep(int ticks);
 			void SetTimeStep(double seconds);
 
-			virtual void Update(float dt) {}
-			virtual void Render(Graphics::Renderer *renderer) {}
+			virtual void Update(Inputs::Processor *processor, float dt) {}
+			virtual void Render(Graphics::Renderer *renderer, float dt) {}
 
 		protected:
 			ECS::Engine* CoreEngine;
@@ -41,6 +43,7 @@ namespace Gin
 
 		private:
 			time_point<steady_clock> LastUpdateTime;
+			time_point<steady_clock> LastRenderTime;
 			time_point<steady_clock> LastFPSRefresh;
 			uint64_t CumulativeDt; //In ticks
 			uint64_t TargetTimeStep;
