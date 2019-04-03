@@ -170,10 +170,14 @@
     <None Include="rsc\Shaders\sprite.vs" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\GraphSearchApp.cpp" />
+    <ClCompile Include="src\Node.cpp" />
     <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\Game.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\GraphSearchApp.h" />
+    <ClInclude Include="src\Node.h" />
     <ClInclude Include="src\EventsExample.h" />
     <ClInclude Include="src\Game.h" />
   </ItemGroup>

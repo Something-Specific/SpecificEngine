@@ -6,7 +6,7 @@ namespace Demo
 {
 	using namespace Gin;
 
-	class Game : public Gin::Core::MasterGame
+	class Game : public Core::MasterGame
 	{
 	public:
 		void Update(Gin::Inputs::Processor *processor, float dt);

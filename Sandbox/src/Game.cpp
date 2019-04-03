@@ -11,7 +11,7 @@ namespace Demo
 	 */
 	void Game::Init() 
 	{
-		Gin::Resources::ResourceLoader::LoadTexture("rsc/card_back.png", 0, "CardBack");
+		Resources::ResourceLoader::LoadTexture("rsc/card_back.png", 0, "CardBack");
 		GAME_INFO("Game initialized.");
 	}
 	
@@ -26,7 +26,7 @@ namespace Demo
 
 	void Game::Render(Gin::Graphics::Renderer *renderer, float dt) 
 	{
-		Gin::Graphics::Texture2D texture = Gin::Resources::ResourceLoader::GetTexture("CardBack");
+		Graphics::Texture2D texture = Resources::ResourceLoader::GetTexture("CardBack");
 		renderer->Render(texture, glm::vec2(64, 64));
 	}
 }

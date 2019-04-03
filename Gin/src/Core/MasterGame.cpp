@@ -22,7 +22,7 @@ namespace Gin
 			screen = new Screen(width, height);
 			summoner = new Summoner(width, height);
 
-			//In ticks 1/60 of a second.s
+			//In ticks 1/60 of a seconds.
 			TargetTimeStep = UPDATE_TIME_STEP;
 			LastUpdateTime = high_resolution_clock::now();
 			LastRenderTime = high_resolution_clock::now();
