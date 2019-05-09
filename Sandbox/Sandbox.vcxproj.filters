@@ -17,6 +17,7 @@
   <ItemGroup>
     <None Include="rsc\Shaders\sprite.frag" />
     <None Include="rsc\Shaders\sprite.vs" />
+    <None Include="rsc\config.json" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application.cpp">

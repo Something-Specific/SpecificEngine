@@ -19,6 +19,16 @@ namespace Gin
 			map = new gainput::InputMap(*manager);
 			map->MapBool(Primary, padId, gainput::PadButtonA);
 			map->MapBool(Secondary, padId, gainput::PadButtonX);
+
+			try
+			{
+				std::ifstream configStream("rsc/config.json", std::ifstream::binary);
+				configStream >> config;
+			}
+			catch (const std::exception& e)
+			{
+				CORE_ERROR("Unable to load input config file: {}", e.what());
+			}
 		}
 
 		void Summoner::Update()
