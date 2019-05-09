@@ -197,5 +197,8 @@
     <ClInclude Include="src\Inputs\Summoner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Resources\GinConfig.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

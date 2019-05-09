@@ -1,5 +1,5 @@
-
-#include "..\GinPch.h"
+#include "../GinPch.h"
+#include "../Resources/GinConfig.hpp"
 
 #include "Summoner.h"
 
@@ -22,8 +22,10 @@ namespace Gin
 
 			try
 			{
-				std::ifstream configStream("rsc/config.json", std::ifstream::binary);
+				std::ifstream configStream( GinConfig::CONFIG_FILE, std::ifstream::binary);
 				configStream >> config;
+
+				CORE_INFO("Config loaded");
 			}
 			catch (const std::exception& e)
 			{

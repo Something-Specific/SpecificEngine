@@ -107,7 +107,7 @@
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(ProjectDir)rsc $(OutDir)rsc\ /e</Command>
+      <Command>xcopy $(ProjectDir)rsc $(OutDir)rsc\ /e /r /y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -160,7 +160,7 @@
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(ProjectDir)rsc $(OutDir)rsc\ /e</Command>
+      <Command>xcopy $(ProjectDir)rsc $(OutDir)rsc\ /e /r /y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
