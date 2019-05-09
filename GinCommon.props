@@ -31,7 +31,7 @@
       <PrecompiledHeaderFile>GinPch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)vendor\glad\lib\windows-x86_64;$(SolutionDir)vendor\glfw\lib\windows-x86_64;$(SolutionDir)vendor\glm\lib\windows-x86_64;$(SolutionDir)vendor\imgui\lib\windows-x86_64;$(SolutionDir)vendor\soil\lib\windows-x86_64;$(SolutionDir)vendor\gainput\lib\windows-x64\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)vendor\glad\lib\windows-x86_64;$(SolutionDir)vendor\glfw\lib\windows-x86_64;$(SolutionDir)vendor\glm\lib\windows-x86_64;$(SolutionDir)vendor\imgui\lib\windows-x86_64;$(SolutionDir)vendor\soil\lib\windows-x86_64;$(SolutionDir)vendor\gainput\lib\windows-dx64\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Ws2_32.lib;xinput.lib;gainputstatic-d.lib;Glad.lib;glfw3.lib;glm_static.lib;ImGui.lib;SOIL.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;shell32.lib</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>
       </IgnoreAllDefaultLibraries>
@@ -47,7 +47,7 @@
       <PrecompiledHeaderFile>GinPch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)vendor\glad\lib\windows-x86_64;$(SolutionDir)vendor\glfw\lib\windows-x86_64;$(SolutionDir)vendor\glm\lib\windows-x86_64;$(SolutionDir)vendor\imgui\lib\windows-x86_64;$(SolutionDir)vendor\soil\lib\windows-x86_64;$(SolutionDir)vendor\gainput\lib\windows-x64\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)vendor\glad\lib\windows-x86_64;$(SolutionDir)vendor\glfw\lib\windows-x86_64;$(SolutionDir)vendor\glm\lib\windows-x86_64;$(SolutionDir)vendor\imgui\lib\windows-x86_64;$(SolutionDir)vendor\soil\lib\windows-x86_64;$(SolutionDir)vendor\gainput\lib\windows-dx64\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Ws2_32.lib;xinput.lib;gainputstatic-d.lib;Glad.lib;glfw3.lib;glm_static.lib;ImGui.lib;SOIL.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;shell32.lib</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>
       </IgnoreAllDefaultLibraries>
@@ -67,7 +67,7 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(SolutionDir)vendor\glad\lib\windows-x86_64;$(SolutionDir)vendor\glfw\lib\windows-x86_64;$(SolutionDir)vendor\glm\lib\windows-x86_64;$(SolutionDir)vendor\imgui\lib\windows-x86_64;$(SolutionDir)vendor\soil\lib\windows-x86_64;$(SolutionDir)vendor\gainput\lib\windows-x64\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)vendor\glad\lib\windows-x86_64;$(SolutionDir)vendor\glfw\lib\windows-x86_64;$(SolutionDir)vendor\glm\lib\windows-x86_64;$(SolutionDir)vendor\imgui\lib\windows-x86_64;$(SolutionDir)vendor\soil\lib\windows-x86_64;$(SolutionDir)vendor\gainput\lib\windows-rx64\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Ws2_32.lib;xinput.lib;gainputstatic.lib;Glad.lib;glfw3.lib;glm_static.lib;ImGui.lib;SOIL.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;shell32.lib</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>
       </IgnoreAllDefaultLibraries>
@@ -87,7 +87,7 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(SolutionDir)vendor\glad\lib\windows-x86_64;$(SolutionDir)vendor\glfw\lib\windows-x86_64;$(SolutionDir)vendor\glm\lib\windows-x86_64;$(SolutionDir)vendor\imgui\lib\windows-x86_64;$(SolutionDir)vendor\soil\lib\windows-x86_64;$(SolutionDir)vendor\gainput\lib\windows-x64\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)vendor\glad\lib\windows-x86_64;$(SolutionDir)vendor\glfw\lib\windows-x86_64;$(SolutionDir)vendor\glm\lib\windows-x86_64;$(SolutionDir)vendor\imgui\lib\windows-x86_64;$(SolutionDir)vendor\soil\lib\windows-x86_64;$(SolutionDir)vendor\gainput\lib\windows-rx64\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Ws2_32.lib;xinput.lib;gainputstatic.lib;Glad.lib;glfw3.lib;glm_static.lib;ImGui.lib;SOIL.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;shell32.lib</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>
       </IgnoreAllDefaultLibraries>
