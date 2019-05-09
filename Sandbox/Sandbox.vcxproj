@@ -163,9 +163,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="rsc\card_back.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="rsc\Shaders\sprite.frag" />
     <None Include="rsc\Shaders\sprite.vs" />
   </ItemGroup>

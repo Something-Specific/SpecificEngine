@@ -7,8 +7,6 @@ int main(int argc, char *argv[])
 {
 	Gin::Log::Init();
 	
-	TestEventsExample();
-	
 	Gin::Core::MasterGame* game = new Demo::Game();
 	game->Run();
 	
