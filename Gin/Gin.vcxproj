@@ -60,6 +60,7 @@
     <ClInclude Include="src\Inputs\Processor.h" />
     <ClInclude Include="src\Core\MasterGame.h" />
     <ClInclude Include="src\Maths\Maths.h" />
+    <ClInclude Include="src\Resources\GinConfig.hpp" />
     <ClInclude Include="src\Resources\ResourceLoader.h" />
     <ClInclude Include="src\Gin.h" />
     <ClInclude Include="src\Maths\Vector2.h" />

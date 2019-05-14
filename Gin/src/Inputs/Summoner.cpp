@@ -1,5 +1,5 @@
-
-#include "..\GinPch.h"
+#include "../GinPch.h"
+#include "../Resources/GinConfig.hpp"
 
 #include "Summoner.h"
 
@@ -19,6 +19,18 @@ namespace Gin
 			map = new gainput::InputMap(*manager);
 			map->MapBool(Primary, padId, gainput::PadButtonA);
 			map->MapBool(Secondary, padId, gainput::PadButtonX);
+
+			try
+			{
+				std::ifstream configStream( GinConfig::CONFIG_FILE, std::ifstream::binary);
+				configStream >> config;
+
+				CORE_INFO("Config loaded");
+			}
+			catch (const std::exception& e)
+			{
+				CORE_ERROR("Unable to load input config file: {}", e.what());
+			}
 		}
 
 		void Summoner::Update()

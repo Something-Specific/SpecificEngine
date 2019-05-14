@@ -26,7 +26,7 @@
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)vendor\spdlog\include;$(SolutionDir)vendor\glfw\include;$(SolutionDir)vendor\glad\include;$(SolutionDir)vendor\imgui\include;$(SolutionDir)vendor\glm\include;$(SolutionDir)vendor\soil\include;$(SolutionDir)vendor\gainput\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)vendor\spdlog\include;$(SolutionDir)vendor\glfw\include;$(SolutionDir)vendor\glad\include;$(SolutionDir)vendor\imgui\include;$(SolutionDir)vendor\glm\include;$(SolutionDir)vendor\soil\include;$(SolutionDir)vendor\gainput\include;$(SolutionDir)vendor\soil\include;$(SolutionDir)vendor\nlohmann-json</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>GIN_PLATFORM_WINDOWS;GIN_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>GinPch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -42,7 +42,7 @@
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)vendor\spdlog\include;$(SolutionDir)vendor\glfw\include;$(SolutionDir)vendor\glad\include;$(SolutionDir)vendor\imgui\include;$(SolutionDir)vendor\glm\include;$(SolutionDir)vendor\soil\include;$(SolutionDir)vendor\gainput\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)vendor\spdlog\include;$(SolutionDir)vendor\glfw\include;$(SolutionDir)vendor\glad\include;$(SolutionDir)vendor\imgui\include;$(SolutionDir)vendor\glm\include;$(SolutionDir)vendor\soil\include;$(SolutionDir)vendor\gainput\include;$(SolutionDir)vendor\nlohmann-json</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>GIN_PLATFORM_WINDOWS;GIN_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>GinPch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -60,7 +60,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)vendor\spdlog\include;$(SolutionDir)vendor\glfw\include;$(SolutionDir)vendor\glad\include;$(SolutionDir)vendor\imgui\include;$(SolutionDir)vendor\glm\include;$(SolutionDir)vendor\soil\include;$(SolutionDir)vendor\gainput\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)vendor\spdlog\include;$(SolutionDir)vendor\glfw\include;$(SolutionDir)vendor\glad\include;$(SolutionDir)vendor\imgui\include;$(SolutionDir)vendor\glm\include;$(SolutionDir)vendor\soil\include;$(SolutionDir)vendor\gainput\include;$(SolutionDir)vendor\nlohmann-json</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>GIN_PLATFORM_WINDOWS;GIN_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>GinPch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -80,7 +80,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)vendor\spdlog\include;$(SolutionDir)vendor\glfw\include;$(SolutionDir)vendor\glad\include;$(SolutionDir)vendor\imgui\include;$(SolutionDir)vendor\glm\include;$(SolutionDir)vendor\soil\include;$(SolutionDir)vendor\gainput\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)vendor\spdlog\include;$(SolutionDir)vendor\glfw\include;$(SolutionDir)vendor\glad\include;$(SolutionDir)vendor\imgui\include;$(SolutionDir)vendor\glm\include;$(SolutionDir)vendor\soil\include;$(SolutionDir)vendor\gainput\include;$(SolutionDir)vendor\nlohmann-json</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>GIN_PLATFORM_WINDOWS;GIN_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>GinPch.h</PrecompiledHeaderFile>
     </ClCompile>
