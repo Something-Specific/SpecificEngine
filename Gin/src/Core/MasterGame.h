@@ -6,6 +6,7 @@
 #include "..\Graphics\Renderer.h"
 #include "..\Inputs\Summoner.h"
 #include "..\Inputs\Processor.h"
+#include "..\ECS\SystemContext.h"
 #include "..\ECS\Engine.h"
 
 #define FPS_REFRESH_RATE 0.25
@@ -23,8 +24,8 @@ namespace Gin
 		class MasterGame
 		{
 		public:
-			Graphics::Screen *screen;
-			Inputs::Summoner *summoner;
+			Graphics::Screen* screen;
+			Inputs::Summoner* summoner;
 
 			MasterGame(float width = 640, float height = 480);
 			~MasterGame();

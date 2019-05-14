@@ -22,15 +22,15 @@ namespace Gin {
 
 
 			static bool TryCreate(Entity* target, RenderNode *node) {
-				RigidbodyComponent *rigidbody = 0;
-				PositionComponent *position = 0;
-				IdentityComponent *identity = 0;
-				DisplayComponent *display = 0;
+				RigidbodyComponent* rigidbody = nullptr;
+				PositionComponent* position = nullptr;
+				IdentityComponent* identity = 0;
+				DisplayComponent* display = 0;
 
-				if (!target->TryGetComponent(ComponentType::Rigidbody, rigidbody) ||
-					!target->TryGetComponent(ComponentType::Display, display) ||
-					!target->TryGetComponent(ComponentType::Position, position) ||
-					!target->TryGetComponent(ComponentType::Identity, identity)) {
+				if (!target->TryGetComponent(ComponentType::Rigidbody, (IComponent**) &rigidbody) ||
+					!target->TryGetComponent(ComponentType::Display, (IComponent**) &display) ||
+					!target->TryGetComponent(ComponentType::Position, (IComponent**) &position) ||
+					!target->TryGetComponent(ComponentType::Identity, (IComponent**) &identity)) {
 					return false;
 				}
 				node->Rigidbody = rigidbody;

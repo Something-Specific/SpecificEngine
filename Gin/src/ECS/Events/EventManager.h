@@ -2,10 +2,10 @@
 
 #include <functional>
 #include <stdio.h>
-#include "EventTypes.h"
+#include "..\Entity.h"
 
 namespace Gin {
-	namespace Events {
+	namespace ECS {
 
 		using namespace std;
 		using namespace placeholders;
@@ -16,11 +16,11 @@ namespace Gin {
 			EventManager();
 			~EventManager();
 
-			void RegisterKeyboardEvent(function<void(int, int)> func);
-			void InvokeKeyboardEvent(int key, int action);
+			void RegisterEntityAddedEvent(function<void(ECS::Entity*)> func);
+			void InvokeEntityAddedEvent(ECS::Entity*);
 
 		private:
-			vector<function<void(int, int)>> *KeyboardEvents;
+			vector<function<void(ECS::Entity*)>> *EntityEvents;
 
 		};
 	}

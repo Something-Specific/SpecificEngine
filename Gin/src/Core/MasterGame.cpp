@@ -10,7 +10,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 namespace Gin
 {
 	namespace Core
@@ -18,7 +17,7 @@ namespace Gin
 
 		MasterGame::MasterGame(float width, float height)
 		{
-			CoreEngine = new ECS::Engine();
+			CoreEngine = new ECS::Engine(new ECS::SystemContext(width, height));
 			screen = new Screen(width, height);
 			summoner = new Summoner(width, height);
 

@@ -1,25 +1,26 @@
 #pragma once
 
-#include "Contracts/IEventManager.h"
-#include "Contracts/ISystemContext.h"
+#include "Events/EventManager.h"
 
 namespace Gin {
 	namespace ECS {
-		class SystemContext : public ISystemContext
+		class SystemContext
 		{
 		public:
-			float ViewportWidth;
-			float ViewportHeight;
-			IEventManager *Events;
 
-			SystemContext(IEventManager *events, float viewportWidth = 640, float viewportHeight = 480) {
-				Events = events;
+			SystemContext(float viewportWidth = 640, float viewportHeight = 480) {
+				Events = new EventManager();
 				ViewportWidth = viewportWidth;
 				ViewportHeight = viewportHeight;
 			}
 			~SystemContext() {
 				delete Events;
 			}
+
+			EventManager* Events;
+			float ViewportWidth;
+			float ViewportHeight;
+
 		};
 	}
 }

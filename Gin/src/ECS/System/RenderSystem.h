@@ -1,6 +1,5 @@
 #pragma once
 
-#include "..\Contracts\ISystemContext.h"
 #include "..\Contracts\IRenderableSystem.h"
 #include "..\Nodes\Rendernode.h"
 #include "..\Entity.h"
@@ -11,7 +10,7 @@ namespace Gin {
 		class RenderSystem : public IRenderableSystem
 		{
 		public:
-			RenderSystem(ISystemContext *context);
+			RenderSystem(SystemContext *context);
 			~RenderSystem();
 
 			void OnEntityAddedEvent(Entity *e);
@@ -19,7 +18,7 @@ namespace Gin {
 
 		private:
 			std::list<RenderNode*> *Targets;
-			ISystemContext *Context;
+			SystemContext *Context;
 		};
 	}
 }

@@ -30,7 +30,7 @@ namespace Gin {
 			}
 
 		private: 
-			static int CurrentId;
+			inline static int CurrentId = 0;
 			inline static int NextAvailableId(){ return ++CurrentId; }
 		};
 	}

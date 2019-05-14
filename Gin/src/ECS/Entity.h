@@ -17,7 +17,7 @@ namespace Gin {
 			void Add(IComponent *component);
 			void Remove(ComponentType type);
 
-			bool TryGetComponent(ComponentType type, IComponent *component);
+			bool TryGetComponent(ComponentType type, IComponent** component);
 
 		private:
 			std::map<ComponentType, IComponent*> *Components;

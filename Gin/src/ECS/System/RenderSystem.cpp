@@ -1,14 +1,19 @@
 
 #include "..\..\GinPch.h"
 
+#include "..\SystemContext.h"
 #include "RenderSystem.h"
 
 namespace Gin {
 	namespace ECS {
 
-		RenderSystem::RenderSystem(ISystemContext *context)
+		RenderSystem::RenderSystem(SystemContext *context)
 		{
 			Context = context;
+			Targets = new std::list<RenderNode*>();	
+			
+			auto func = std::bind(&RenderSystem::OnEntityAddedEvent, this, _1);
+			Context->Events->RegisterEntityAddedEvent(func);
 		}
 
 		void RenderSystem::Render(float dt, Graphics::Renderer* renderer) {

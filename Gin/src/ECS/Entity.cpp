@@ -12,12 +12,12 @@ namespace Gin {
 
 		Entity::Entity() {
 			Components = new std::map<ComponentType, IComponent*>();
-			Add(new IdentityComponent(new std::string("Default")));
+			Add((IComponent*)new IdentityComponent(new std::string("Default")));
 		}
 
 		Entity::Entity(std::string *name) {
 			Components = new std::map<ComponentType, IComponent*>();
-			Add(new IdentityComponent(name));
+			Add((IComponent*)new IdentityComponent(name));
 		}
 
 		void Entity::Add(IComponent *component) {
@@ -28,11 +28,11 @@ namespace Gin {
 			Components->erase(type);
 		}
 
-		bool Entity::TryGetComponent(ComponentType type, IComponent *component) {
+		bool Entity::TryGetComponent(ComponentType type, IComponent** component) {
 			auto pos = Components->find(type);
 			if (pos == Components->end())
 				return false;
-			component = pos->second;
+			*component = pos->second;
 			return true;
 		}
 

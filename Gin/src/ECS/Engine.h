@@ -3,6 +3,7 @@
 #include <map>
 #include "Contracts\IRenderableSystem.h"
 #include "Contracts\IUpdateablesystem.h"
+#include "SystemContext.h"
 #include "..\Graphics\Renderer.h"
 #include "..\Inputs\Processor.h"
 #include "Entity.h"
@@ -16,8 +17,9 @@ namespace Gin {
 		class Engine {
 
 		public:
+			SystemContext* Context;
 
-			Engine();
+			Engine(SystemContext* context);
 			~Engine();
 
 			void Update(float dt, Processor* processor);

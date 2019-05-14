@@ -12,12 +12,23 @@
 #include "Resources\ResourceLoader.h"
 #include "Inputs\Processor.h"
 
+//Engine Contracts
+#include "ECS\Contracts\IComponent.h"
+#include "ECS\Contracts\INode.h"
+#include "ECS\Contracts\IRenderableSystem.h"
+#include "ECS\Contracts\IUpdateableSystem.h"
+
 //Engine core
 #include "Core\MasterGame.h"
 #include "ECS\Engine.h"
+#include "ECS\Entity.h"
+
 #include "ECS\System\SystemTypes.h"
 #include "ECS\Components\ComponentType.h"
-#include "ECS\Entity.h"
+
+#include "ECS\Events\EventManager.h"
+#include "ECS\SystemContext.h"
+
 
 //Systems
 #include "ECS\System\RenderSystem.h"

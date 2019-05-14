@@ -5,7 +5,8 @@
 namespace Gin {
 	namespace ECS {
 
-		Engine::Engine() {
+		Engine::Engine(SystemContext* context) {
+			Context = context;
 			UpdateSystems = new std::map<unsigned short, IUpdateableSystem*>();
 			RenderSystems = new std::map<unsigned short, IRenderableSystem*>();
 			Entities = new std::list<Entity*>();
@@ -32,6 +33,7 @@ namespace Gin {
 
 		void Engine::AddEntity(Entity *entity) {
 			Entities->push_back(entity);
+			Context->Events->InvokeEntityAddedEvent(entity);
 		}
 
 		void Engine::AddSystem(unsigned short priority, IUpdateableSystem *system) {

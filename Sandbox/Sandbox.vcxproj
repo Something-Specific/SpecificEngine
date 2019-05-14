@@ -101,6 +101,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)Gin\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>GIN_PLATFORM_WINDOWS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -163,8 +164,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="rsc\Shaders\sprite.frag" />
-    <None Include="rsc\Shaders\sprite.vs" />
+    <None Include="rsc\Shaders\sprite.frag">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="rsc\Shaders\sprite.vs">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application.cpp" />
@@ -173,6 +178,11 @@
   <ItemGroup>
     <ClInclude Include="src\EventsExample.h" />
     <ClInclude Include="src\Game.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="rsc\BasicTile.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
