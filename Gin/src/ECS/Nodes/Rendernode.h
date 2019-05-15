@@ -21,11 +21,11 @@ namespace Gin {
 			RigidbodyComponent *Rigidbody;
 
 
-			static bool TryCreate(Entity* target, RenderNode *node) {
-				RigidbodyComponent* rigidbody = nullptr;
-				PositionComponent* position = nullptr;
-				IdentityComponent* identity = 0;
-				DisplayComponent* display = 0;
+			static bool TryCreate(Entity* target, RenderNode* node) {
+				RigidbodyComponent** rigidbody = nullptr;
+				PositionComponent** position = nullptr;
+				IdentityComponent** identity = nullptr;
+				DisplayComponent** display = nullptr;
 
 				if (!target->TryGetComponent(ComponentType::Rigidbody, (IComponent**) &rigidbody) ||
 					!target->TryGetComponent(ComponentType::Display, (IComponent**) &display) ||
@@ -33,10 +33,10 @@ namespace Gin {
 					!target->TryGetComponent(ComponentType::Identity, (IComponent**) &identity)) {
 					return false;
 				}
-				node->Rigidbody = rigidbody;
-				node->Display = display;
-				node->Position = position;
-				node->Identity = identity;
+				node->Rigidbody = *rigidbody;
+				node->Display = *display;
+				node->Position = *position;
+				node->Identity = *identity;
 				return true;
 			}
 			

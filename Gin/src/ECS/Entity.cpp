@@ -32,7 +32,8 @@ namespace Gin {
 			auto pos = Components->find(type);
 			if (pos == Components->end())
 				return false;
-			*component = pos->second;
+			auto s = pos->second;
+			*component = (pos->second);
 			return true;
 		}
 

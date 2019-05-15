@@ -170,14 +170,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="rsc\Shaders\sprite.frag">
-      <DeploymentContent>true</DeploymentContent>
-    </None>
-    <None Include="rsc\Shaders\sprite.vs">
-      <DeploymentContent>true</DeploymentContent>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="rsc\config.json" />
     <None Include="rsc\Shaders\sprite.frag" />
     <None Include="rsc\Shaders\sprite.vs" />
