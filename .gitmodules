@@ -16,3 +16,6 @@
 [submodule "Vendor/imgui/src"]
 	path = Vendor/imgui/src
 	url = git@github.com:ocornut/imgui.git
+[submodule "Vendor/soil"]
+	path = Vendor/soil
+	url = git@github.com:paralin/soil.git

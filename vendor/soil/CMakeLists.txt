@@ -1,3 +1,0 @@
-
-FIND_LIBRARY(SOIL NAMES SOIL.lib PATHS "./lib/windows-x86_64" )
-FIND_PATH(SOIL_INCLUDE_DIRS SOIL.h "./include" )
