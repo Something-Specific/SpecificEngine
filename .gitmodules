@@ -1,0 +1,3 @@
+[submodule "Vendor/glad"]
+	path = Vendor/glad
+	url = git@github.com:Dav1dde/glad.git
