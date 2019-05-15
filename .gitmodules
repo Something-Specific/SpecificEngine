@@ -13,3 +13,6 @@
 [submodule "Vendor/glm"]
 	path = Vendor/glm
 	url = git@github.com:g-truc/glm.git
+[submodule "Vendor/imgui/src"]
+	path = Vendor/imgui/src
+	url = git@github.com:ocornut/imgui.git
