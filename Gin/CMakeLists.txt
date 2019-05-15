@@ -1,7 +1,10 @@
-project(Gin)
+project(Gin VERSION 1.0.0 DESCRIPTION "Very nice project")
 
-add_library(${PROJECT_NAME} INTERFACE)
+
+add_library(${PROJECT_NAME} STATIC src/Gin.h)
 add_library(${PROJECT_NAME}::Core ALIAS ${PROJECT_NAME})
+
+set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 target_include_directories(${PROJECT_NAME}
     INTERFACE 
@@ -13,6 +16,8 @@ target_include_directories(${PROJECT_NAME}
 )
 
 target_link_libraries(${PROJECT_NAME}
-    INTERFACE nlohmann::json
+    nlohmann_json::nlohmann_json
     spdlog::spdlog
 )
+
+
