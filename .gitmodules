@@ -1,3 +1,6 @@
 [submodule "Vendor/glad"]
 	path = Vendor/glad
 	url = git@github.com:Dav1dde/glad.git
+[submodule "Vendor/catch"]
+	path = Vendor/catch
+	url = git@github.com:catchorg/Catch2.git
