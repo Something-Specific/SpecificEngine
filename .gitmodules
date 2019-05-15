@@ -19,3 +19,6 @@
 [submodule "Vendor/soil"]
 	path = Vendor/soil
 	url = git@github.com:paralin/soil.git
+[submodule "Vendor/json"]
+	path = Vendor/json
+	url = git@github.com:nlohmann/json.git
