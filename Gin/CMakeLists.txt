@@ -7,6 +7,10 @@ target_include_directories(${PROJECT_NAME}
     INTERFACE 
         ${PROJECT_SOURCE_DIR}/src
 )
+target_include_directories(${PROJECT_NAME}
+		PUBLIC 
+		${GLAD_INCLUDE_DIRS}
+)
 
 target_link_libraries(${PROJECT_NAME}
     INTERFACE nlohmann::json
