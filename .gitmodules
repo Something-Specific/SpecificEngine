@@ -7,3 +7,6 @@
 [submodule "Vendor/spdlog"]
 	path = Vendor/spdlog
 	url = git@github.com:gabime/spdlog.git
+[submodule "Vendor/glfw"]
+	path = Vendor/glfw
+	url = git@github.com:glfw/glfw.git
