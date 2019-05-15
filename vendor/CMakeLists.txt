@@ -1,7 +1,12 @@
-
 project(Vendor)
 
 add_subdirectory(catch)
+add_compile_definitions(-DGAINPUT_BUILD_STATIC=OFF)
+add_subdirectory(gainput)
+add_subdirectory(glad)
+add_subdirectory(glfw)
+add_subdirectory(glm)
+add_subdirectory(imgui)
 add_subdirectory(json)
-add_subdirectory(spdlog)
 add_subdirectory(soil)
+add_subdirectory(spdlog)

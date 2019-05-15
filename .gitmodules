@@ -22,6 +22,3 @@
 [submodule "Vendor/json"]
 	path = Vendor/json
 	url = git@github.com:nlohmann/json.git
-[submodule "Vendor/gainput"]
-	path = Vendor/gainput
-	url = git@github.com:jkuhlmann/gainput.git

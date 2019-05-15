@@ -1,14 +1,14 @@
 #pragma once
 
 #include "Processor.h"
-#include "json.hpp"
+#include "nlohmann/json.hpp"
 
 
 //TODO: should be moved to project settings or macro file.
 #define GAINPUT_DEBUG
 #define GAINPUT_PLATFORM_WIN
 
-#include <gainput/gainput.h>
+#include <lib/include/gainput/gainput.h>
 #include <fstream>
 
 namespace Gin
