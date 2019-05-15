@@ -1,7 +1,6 @@
 project(Vendor)
 
 add_subdirectory(catch)
-add_compile_definitions(-DGAINPUT_BUILD_STATIC=OFF)
 add_subdirectory(gainput)
 add_subdirectory(glad)
 add_subdirectory(glfw)

@@ -8,7 +8,7 @@
 #define GAINPUT_DEBUG
 #define GAINPUT_PLATFORM_WIN
 
-#include <lib/include/gainput/gainput.h>
+#include <gainput/gainput.h>
 #include <fstream>
 
 namespace Gin
