@@ -1,5 +1,3 @@
-project(Vendor)
-
 add_subdirectory(catch)
 add_subdirectory(gainput)
 add_subdirectory(glad)

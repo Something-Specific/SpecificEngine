@@ -1,11 +1,9 @@
 
-ADD_LIBRARY(gainput STATIC IMPORTED GLOBAL)
-
-find_library(GAINPUT_PATH gainput.lib ${CMAKE_CURRENT_SOURCE_DIR}/lib/.)
+find_library(GAINPUT_PATH gainputstatic.lib ${CMAKE_CURRENT_SOURCE_DIR}/lib/.)
+add_library(gainput STATIC IMPORTED GLOBAL)
 message("Loading gainput from " ${GAINPUT_PATH})
-SET_TARGET_PROPERTIES(gainput 
+set_target_properties(gainput 
 	PROPERTIES 
 	INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/include
-	IMPORTED_LINK_INTERFACE_LIBRARIES gainput.lib
 	IMPORTED_LOCATION ${GAINPUT_PATH}
 )

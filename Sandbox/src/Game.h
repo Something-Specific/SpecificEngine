@@ -9,13 +9,12 @@ namespace Demo
 	class Game : public Core::MasterGame
 	{
 	public:
-		void Update(Gin::Inputs::Processor *processor, float dt);
-		void Render(Gin::Graphics::Renderer *renderer, float dt);
+		void Update(Inputs::Processor *processor, float dt);
+		void Render(Graphics::Renderer *renderer, float dt);
 
 	private:
 		void Init();
 
-		ECS::Engine* CoreEngine;
 	};
 
 }
