@@ -176,7 +176,7 @@
     <None Include="rsc\Shaders\sprite.vs" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DemoEvent.cpp" />
+    <ClCompile Include="src\DemoEvent.cpp" />
     <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\Game.cpp" />
   </ItemGroup>

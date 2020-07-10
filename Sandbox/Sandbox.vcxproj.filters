@@ -26,7 +26,7 @@
     <ClCompile Include="src\Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DemoEvent.cpp">
+    <ClCompile Include="src\DemoEvent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

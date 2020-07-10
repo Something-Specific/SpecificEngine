@@ -2,7 +2,7 @@
 #include "Gin.h"
 #include "Game.h"
 #include "EventsExample.h"
-#include "../DemoEvent.cpp"
+#include "DemoEvent.cpp"
 #include <chrono>
 #include <thread>
 

@@ -17,7 +17,7 @@ namespace Demo
 
 		auto tileTex = Resources::ResourceLoader::GetTexture("BasicTile");
 
-		auto sprite = new Gin::Display::Sprite(&tileTex);
+		auto sprite = new Gin::Display::Sprite(&tileTex, 100, 100, 32, 32);
 		stage->AddChild(sprite);
 	}
 	

@@ -12,8 +12,8 @@ namespace Gin {
 		public:
 			Actor();
 			~Actor();
-			void Update(Inputs::Processor* processor, float dt);
-			void Render(Graphics::Renderer* renderer, float dt);
+			virtual void Update(Inputs::Processor* processor, float dt);
+			virtual void Render(Graphics::Renderer* renderer, float dt);
 			void AddEventListener(const Events::Event::EventType& eventType, Events::EventDispatcher::EventHandler&& eventHandler);
 			void DispatchEvent(const Events::Event& event);
 		protected:

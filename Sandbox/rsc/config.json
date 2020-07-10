@@ -4,7 +4,7 @@
       "type": "InputDevicePad",
       "buttons": {
         "Primary": "PadButtonA",
-        "Secondary": "PadButtonX",
+        "Secondary": "PadButtonX"
       }
     },
     {

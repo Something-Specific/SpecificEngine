@@ -13,7 +13,9 @@ namespace Gin
 			unsigned int ID;
 
 			// Constructor
-			Shader() { }
+			Shader() {
+				this->ID = 0;
+			}
 
 			// Sets the current shader as active
 			Shader  &Use();

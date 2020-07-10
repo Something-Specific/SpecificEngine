@@ -11,10 +11,10 @@ namespace Gin {
 	namespace Display {
 		class  Sprite : public Actor {
 		public:
-			Sprite(Graphics::Texture2D* texture);
+			Sprite(Graphics::Texture2D* texture, float x, float y, float w, float h);
 			~Sprite();
-			void Update(Inputs::Processor* processor, float dt);
-			void Render(Graphics::Renderer* renderer, float dt);
+			virtual void Update(Inputs::Processor* processor, float dt);
+			virtual void Render(Graphics::Renderer* renderer, float dt);
 		private:
 			Graphics::Texture2D* texture;
 		};
