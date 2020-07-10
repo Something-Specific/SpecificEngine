@@ -6,7 +6,7 @@ namespace Gin {
 	namespace Display {
 
 		Stage::Stage() {
-			//Actors = new std::list<int*>();
+			Actors = new std::list<Actor*>();
 		}
 
 		void Stage::AddChild(Actor* actor) {

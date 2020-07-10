@@ -17,7 +17,6 @@ namespace Gin
 
 		MasterGame::MasterGame(float width, float height)
 		{
-			CoreEngine = new ECS::Engine(new ECS::SystemContext(width, height));
 			screen = new Screen(width, height);
 			summoner = new Summoner(width, height);
 
@@ -28,11 +27,15 @@ namespace Gin
 			LastFPSRefresh = high_resolution_clock::now();
 
 			CORE_INFO("Gin initialized.");
+
+			stage = new Stage();
 		}
 
 		MasterGame::~MasterGame()
 		{
 			screen->~Screen();
+			summoner->~Summoner();
+			stage->~Stage();
 		}
 
 		void MasterGame::Run()
@@ -94,12 +97,12 @@ namespace Gin
 
 		void MasterGame::SetTimeStep(int ticks)
 		{
-
+			TargetTimeStep = ticks;
 		}
 		
 		void MasterGame::SetTimeStep(double seconds)
 		{
-
+			TargetTimeStep = TICKS_IN_SECOND * seconds;
 		}
 	}
 }

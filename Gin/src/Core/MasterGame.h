@@ -6,26 +6,26 @@
 #include "..\Graphics\Renderer.h"
 #include "..\Inputs\Summoner.h"
 #include "..\Inputs\Processor.h"
+#include "..\Display\Stage.h"
 #include "..\ECS\SystemContext.h"
 #include "..\ECS\Engine.h"
 
-#define FPS_REFRESH_RATE 0.25
-#define UPDATE_TIME_STEP 1666667
-#define TICKS_IN_SECOND 10000000
+constexpr auto FPS_REFRESH_RATE = 0.25;
+constexpr auto UPDATE_TIME_STEP = 1666667;
+constexpr auto TICKS_IN_SECOND = 10000000;
 
 namespace Gin
 {
 	namespace Core
 	{
+		using namespace Display; 
 		using namespace Graphics;
-		using namespace Inputs; 
+		using namespace Inputs;
 		using namespace std::chrono;
 
 		class MasterGame
 		{
 		public:
-			Graphics::Screen* screen;
-			Inputs::Summoner* summoner;
 
 			MasterGame(float width = 640, float height = 480);
 			~MasterGame();
@@ -38,11 +38,14 @@ namespace Gin
 			virtual void Render(Graphics::Renderer *renderer, float dt) {}
 
 		protected:
-			ECS::Engine* CoreEngine;
+			Display::Stage* stage;
 
 			virtual void Init() {}
 
 		private:
+			Graphics::Screen* screen;
+			Inputs::Summoner* summoner;
+
 			time_point<steady_clock> LastUpdateTime;
 			time_point<steady_clock> LastRenderTime;
 			time_point<steady_clock> LastFPSRefresh;

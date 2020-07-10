@@ -17,14 +17,7 @@ namespace Demo
 
 		auto tileTex = Resources::ResourceLoader::GetTexture("BasicTile");
 
-		CoreEngine->AddSystem(0, (ECS::IRenderableSystem*) new ECS::RenderSystem(CoreEngine->Context));
-
-		auto tile = new ECS::Entity(new std::string("Tile"));
-		tile->Add((ECS::IComponent*) new ECS::DisplayComponent(&tileTex));
-		tile->Add((ECS::IComponent*) new ECS::PositionComponent(new Maths::Vector2f(100.0F, 10.0F)));
-		tile->Add((ECS::IComponent*) new ECS::RigidbodyComponent(64, 64));
-
-		CoreEngine->AddEntity(tile);
+		
 	}
 	
 	/*
@@ -33,11 +26,11 @@ namespace Demo
 	*/
 	void Game::Update(Inputs::Processor *processor, float dt)
 	{
-		CoreEngine->Update(dt, processor);
+		stage->Update(processor, dt);
 	}
 
 	void Game::Render(Graphics::Renderer *renderer, float dt) 
 	{
-		CoreEngine->Render(dt, renderer);
+		stage->Render(renderer, dt);
 	}
 }

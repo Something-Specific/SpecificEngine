@@ -11,6 +11,8 @@
 #include "Inputs\Mouse.h"
 #include "Resources\ResourceLoader.h"
 #include "Inputs\Processor.h"
+#include "Display\Stage.h"
+#include "Display\Actor.h"
 
 //Engine Contracts
 #include "ECS\Contracts\IComponent.h"
