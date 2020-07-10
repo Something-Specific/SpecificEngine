@@ -2,8 +2,7 @@
 #include "..\GinPch.h"
 #include "Event.h"
 
-namespace Gin
-{
+namespace Gin {
 	namespace Events {
 		class EventDispatcher
 		{

@@ -3,12 +3,9 @@
 #include "..\GinPch.h"
 #include "..\Events\EventDispatcher.h"
 
-namespace Gin
-{
-	namespace Display
-	{
-		class  Actor
-		{
+namespace Gin {
+	namespace Display {
+		class  Actor {
 		public:
 			Actor();
 			~Actor();

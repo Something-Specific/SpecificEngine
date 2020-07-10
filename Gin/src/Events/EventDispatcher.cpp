@@ -3,8 +3,7 @@
 #include "Event.h"
 #include "EventDispatcher.h"
 
-namespace Gin
-{
+namespace Gin {
 	namespace Events {
 		void EventDispatcher::addEventListener(const Event::EventType& eventType, EventHandler&& eventHandler) {
 			eventHandlers[eventType].push_back(eventHandler);

@@ -3,10 +3,8 @@
 #include "..\GinPch.h"
 #include "Actor.h"
 
-namespace Gin
-{
-	namespace Display
-	{
+namespace Gin {
+	namespace Display {
 		Actor::Actor() {
 
 		}
