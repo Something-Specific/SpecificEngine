@@ -2,6 +2,8 @@
 
 #include "..\GinPch.h"
 #include "..\Events\EventDispatcher.h"
+#include "..\Inputs\Processor.h"
+#include "..\Graphics\Renderer.h"
 
 namespace Gin {
 	namespace Display {
