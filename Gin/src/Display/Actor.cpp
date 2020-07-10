@@ -6,7 +6,7 @@
 namespace Gin {
 	namespace Display {
 		Actor::Actor() {
-
+			eventDispatcher = new Events::EventDispatcher();
 		}
 
 		Actor::~Actor() {
@@ -18,6 +18,14 @@ namespace Gin {
 		}
 
 		void Actor::Render(Graphics::Renderer* renderer, float dt) {
+
+		}
+
+		void Actor::AddEventListener(const Events::Event::EventType& eventType, Events::EventDispatcher::EventHandler&& eventHandler) {
+
+		}
+
+		void Actor::DispatchEvent(const Events::Event& event) {
 
 		}
 	}
