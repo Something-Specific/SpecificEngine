@@ -32,17 +32,4 @@
 #include "Inputs\Keys.h"
 #include "Maths\Maths.h"
 #include "Utils\Macros.h"
-//#include "Inputs\Processor.h"
-//#include "Graphics\Renderer.h"
 
-//#include "Utils\Assert.h"
-//#include "Utils\Log.h"
-
-//#include "Resources\ResourceLoader.h"
-//#include "Graphics\Texture2D.h"
-//#include "Graphics\Screen.h"
-//#include "Graphics\Shader.h"
-
-//#include "Inputs\Controller.h"
-//#include "Inputs\Keyboard.h"
-//#include "Inputs\Mouse.h"

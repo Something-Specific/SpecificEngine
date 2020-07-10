@@ -50,9 +50,14 @@ namespace Gin
 			Renderer::Render(texture, glm::vec2(position.x, position.y));
 		}
 
-		void Renderer::Render(Texture2D &texture, Maths::Vector2f position, Maths::Vector2i size) {
+		void Renderer::Render(Texture2D &texture, Maths::Vector2f position, Maths::Vector2f size) {
 			Renderer::Render(texture, glm::vec2(position.x, position.y), 
-				glm::vec2(static_cast<float>(size.x), static_cast<float>(size.y)));
+				glm::vec2(size.x, size.y));
+		}
+
+		void Renderer::Render(Texture2D& texture, Maths::Vector2f position, Maths::Vector2f size, float rotate) {
+			Renderer::Render(texture, glm::vec2(position.x, position.y),
+				glm::vec2(size.x, size.y), rotate);
 		}
 
 		void Renderer::Render(Texture2D &texture, glm::vec2 position, float rotate, glm::vec3 color)

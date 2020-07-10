@@ -12,12 +12,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Display\Actor.cpp" />
+    <ClCompile Include="src\Display\Sprite.cpp" />
     <ClCompile Include="src\Display\Stage.cpp" />
     <ClCompile Include="src\Events\EventDispatcher.cpp" />
-    <ClCompile Include="src\ECS\Events\EventManager.cpp" />
-    <ClCompile Include="src\ECS\Engine.cpp" />
-    <ClCompile Include="src\ECS\System\RenderSystem.cpp" />
-    <ClCompile Include="src\ECS\Entity.cpp" />
     <ClCompile Include="src\GinPch.cpp" />
     <ClCompile Include="src\Graphics\Renderer.cpp" />
     <ClCompile Include="src\Graphics\Screen.cpp" />
@@ -35,24 +32,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Display\Actor.h" />
+    <ClInclude Include="src\Display\Sprite.h" />
     <ClInclude Include="src\Display\Stage.h" />
-    <ClInclude Include="src\ECS\Events\Event.h" />
-    <ClInclude Include="src\ECS\Events\EventManager.h" />
-    <ClInclude Include="src\ECS\Components\DisplayComponent.h" />
-    <ClInclude Include="src\ECS\Components\IdentityComponent.h" />
-    <ClInclude Include="src\ECS\Components\PositionComponent.h" />
-    <ClInclude Include="src\ECS\Components\RigidBodyComponent.h" />
-    <ClInclude Include="src\ECS\Components\ComponentType.h" />
-    <ClInclude Include="src\ECS\Components\VelocityComponent.h" />
-    <ClInclude Include="src\ECS\Contracts\IRenderableSystem.h" />
-    <ClInclude Include="src\ECS\Contracts\IUpdateableSystem.h" />
-    <ClInclude Include="src\ECS\Engine.h" />
-    <ClInclude Include="src\ECS\Nodes\Rendernode.h" />
-    <ClInclude Include="src\ECS\System\RenderSystem.h" />
-    <ClInclude Include="src\ECS\Contracts\IComponent.h" />
-    <ClInclude Include="src\ECS\Contracts\INode.h" />
-    <ClInclude Include="src\ECS\Entity.h" />
-    <ClInclude Include="src\ECS\System\SystemTypes.h" />
     <ClInclude Include="src\Events\Event.h" />
     <ClInclude Include="src\Events\EventDispatcher.h" />
     <ClInclude Include="src\GinPch.h" />
@@ -71,7 +52,6 @@
     <ClInclude Include="src\Resources\ResourceLoader.h" />
     <ClInclude Include="src\Gin.h" />
     <ClInclude Include="src\Maths\Vector2.h" />
-    <ClInclude Include="src\ECS\SystemContext.h" />
     <ClInclude Include="src\Utils\Assert.h" />
     <ClInclude Include="src\Utils\Log.h" />
     <ClInclude Include="src\Utils\Macros.h" />

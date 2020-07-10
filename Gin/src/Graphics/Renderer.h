@@ -18,7 +18,8 @@ namespace Gin
 			~Renderer();
 
 			void Render(Texture2D &texture, Maths::Vector2f position);
-			void Render(Texture2D &texture, Maths::Vector2f position, Maths::Vector2i size);
+			void Render(Texture2D &texture, Maths::Vector2f position, Maths::Vector2f size);
+			void Render(Texture2D& texture, Maths::Vector2f position, Maths::Vector2f size, float rotate);
 
 			void Render(Texture2D &texture, glm::vec2 position, float rotate = 0.0f, glm::vec3 color = glm::vec3(1.0f));
 			void Render(Texture2D &texture, glm::vec2 position, glm::vec2 size, float rotate = 0.0f, glm::vec3 color = glm::vec3(1.0f));

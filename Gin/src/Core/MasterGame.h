@@ -7,8 +7,6 @@
 #include "..\Inputs\Summoner.h"
 #include "..\Inputs\Processor.h"
 #include "..\Display\Stage.h"
-#include "..\ECS\SystemContext.h"
-#include "..\ECS\Engine.h"
 
 constexpr auto FPS_REFRESH_RATE = 0.25;
 constexpr auto UPDATE_TIME_STEP = 1666667;
