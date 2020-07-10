@@ -11,6 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Display\Actor.cpp" />
+    <ClCompile Include="src\Display\Stage.cpp" />
+    <ClCompile Include="src\Events\EventDispatcher.cpp" />
     <ClCompile Include="src\ECS\Events\EventManager.cpp" />
     <ClCompile Include="src\ECS\Engine.cpp" />
     <ClCompile Include="src\ECS\System\RenderSystem.cpp" />
@@ -31,6 +34,8 @@
     <ClCompile Include="src\Inputs\Summoner.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Display\Actor.h" />
+    <ClInclude Include="src\Display\Stage.h" />
     <ClInclude Include="src\ECS\Events\Event.h" />
     <ClInclude Include="src\ECS\Events\EventManager.h" />
     <ClInclude Include="src\ECS\Components\DisplayComponent.h" />
@@ -48,6 +53,8 @@
     <ClInclude Include="src\ECS\Contracts\INode.h" />
     <ClInclude Include="src\ECS\Entity.h" />
     <ClInclude Include="src\ECS\System\SystemTypes.h" />
+    <ClInclude Include="src\Events\Event.h" />
+    <ClInclude Include="src\Events\EventDispatcher.h" />
     <ClInclude Include="src\GinPch.h" />
     <ClInclude Include="src\Graphics\Renderer.h" />
     <ClInclude Include="src\Graphics\Screen.h" />
