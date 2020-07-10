@@ -26,7 +26,7 @@ namespace Gin {
 		}
 
 		void Actor::DispatchEvent(const Events::Event& event) {
-
+			eventDispatcher->dispatch(event);
 		}
 	}
 }

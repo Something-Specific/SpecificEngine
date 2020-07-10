@@ -7,7 +7,7 @@ namespace Gin
 	namespace Events {
 		class Event {
 		public:
-			virtual ~Event();
+			virtual ~Event() {};
 
 			using EventType = const char*;
 			virtual EventType type() const = 0;
