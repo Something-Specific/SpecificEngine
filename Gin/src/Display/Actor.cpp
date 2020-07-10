@@ -22,7 +22,7 @@ namespace Gin {
 		}
 
 		void Actor::AddEventListener(const Events::Event::EventType& eventType, Events::EventDispatcher::EventHandler&& eventHandler) {
-
+			eventDispatcher->addEventListener(eventType, std::move(eventHandler));
 		}
 
 		void Actor::DispatchEvent(const Events::Event& event) {
