@@ -22,12 +22,12 @@ namespace Gin
 
 			try
 			{
-				std::ifstream configStream( GinConfig::CONFIG_FILE, std::ifstream::binary);
+				std::ifstream configStream(GinConfig::CONFIG_FILE, std::ifstream::binary);
 				configStream >> config;
 
 				CORE_INFO("Config loaded");
 			}
-			catch (const std::exception& e)
+			catch (const std::exception &e)
 			{
 				CORE_ERROR("Unable to load input config file: {}", e.what());
 			}
@@ -36,7 +36,8 @@ namespace Gin
 		void Summoner::Update()
 		{
 			manager->Update();
-			if (map->GetBoolWasDown(Primary)) {
+			if (map->GetBoolWasDown(Primary))
+			{
 				CORE_INFO("Primary button down.");
 			}
 		}
@@ -47,6 +48,5 @@ namespace Gin
 			delete manager;
 		}
 
-
-	}
-}
+	} // namespace Inputs
+} // namespace Gin
