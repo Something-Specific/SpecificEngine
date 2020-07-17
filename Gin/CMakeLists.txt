@@ -1,13 +1,11 @@
 
 find_package(glad CONFIG REQUIRED)
+find_package(spdlog CONFIG REQUIRED)
 
-file(GLOB_RECURSE fileCollection "src/*.cpp")
+file(GLOB_RECURSE fileCollection "src/*.cpp" "src/*.h")
 add_library(Gin ${fileCollection})
 
-set_target_properties(Gin PROPERTIES PUBLIC_HEADER "src/Gin.h")
-
 target_link_libraries(Gin PRIVATE glad::glad)
+target_link_libraries(Gin PRIVATE spdlog)
 
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-include(CPack)
+target_include_directories(Gin PUBLIC "src/")
