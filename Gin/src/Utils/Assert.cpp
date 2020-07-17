@@ -6,6 +6,11 @@
 namespace Gin {
 	namespace Util {
 
+
+		void Assert::CoreAssert(bool condition) {
+			CoreAssert(condition, NULL);
+		}
+
 		void Assert::CoreAssert(bool condition, const char* failMsg) {
 			if (!condition) {
 				if(!failMsg) {
@@ -16,6 +21,11 @@ namespace Gin {
 				exit(EXIT_FAILURE);
 			}
 		}
+
+		void Assert::GameAssert(bool condition) {
+			CoreAssert(condition, NULL);
+		}
+
 		void Assert::GameAssert(bool condition, const char* failMsg) {
 			if (!condition) {
 				if(!failMsg) {
