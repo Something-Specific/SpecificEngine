@@ -1,6 +1,11 @@
 
+# find_package(gainput CONFIG REQUIRED)
 find_package(glad CONFIG REQUIRED)
+find_package(glfw3 CONFIG REQUIRED)
+find_package(glm CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
+find_package(soil CONFIG REQUIRED)
+find_package(spdlog CONFIG REQUIRED)
 
 add_library(Gin 
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Gin.h"
@@ -47,8 +52,7 @@ add_library(Gin
 )
 
 set_target_properties(Gin PROPERTIES PUBLIC_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/src/Gin.h")
-
-target_link_libraries(Gin PRIVATE glad::glad)
-target_link_libraries(Gin PRIVATE nlohmann_json::nlohmann_json)
-
 target_include_directories(Gin PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
+
+target_link_libraries(Gin PUBLIC gainput glad glfw3 glm nlohmann_json soil spdlog)
+
