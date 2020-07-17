@@ -9,18 +9,20 @@ namespace Demo
 		should be the function to load in all the assets and
 		create any needed objects for the update and render methods.
 	 */
-	void Game::Init() 
+
+	void Game::Init()
 	{
 		Resources::ResourceLoader::LoadTexture("rsc/BasicTile.png", 0, "BasicTile");
 		GAME_INFO("Game initialized.");
 
+		// auto tileTex = Resources::ResourceLoader::GetTexture("BasicTile");
+		Texture = Resources::ResourceLoader::GetTexture("BasicTile");
+		Position = Maths::Vector2<float>(10.0f, 5.0f);
 
-		auto tileTex = Resources::ResourceLoader::GetTexture("BasicTile");
-
-		auto sprite = new Gin::Display::Sprite(&tileTex, 100, 100, 32, 32);
-		stage->AddChild(sprite);
+		// auto sprite = new Gin::Display::Sprite(&tileTex, 100, 100, 32, 32);
+		// stage->AddChild(sprite);
 	}
-	
+
 	/*
 		The update function for all game logic. This will occur at a fixed
 		delta of 60 a second.
@@ -30,8 +32,9 @@ namespace Demo
 		stage->Update(processor, dt);
 	}
 
-	void Game::Render(Graphics::Renderer *renderer, float dt) 
+	void Game::Render(Graphics::Renderer *renderer, float dt)
 	{
-		stage->Render(renderer, dt);
+		// stage->Render(renderer, dt);
+		renderer->Render(Texture, Position);
 	}
-}
+} // namespace Demo

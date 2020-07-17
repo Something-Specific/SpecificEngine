@@ -14,7 +14,8 @@ namespace Demo
 
 	private:
 		void Init();
-
+		Graphics::Texture2D Texture;
+		Maths::Vector2f Position;
 	};
 
-}
+} // namespace Demo
