@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	Gin::Core::MasterGame *game = new Demo::Game();
 	Gin::Display::Actor *test = new Gin::Display::Actor();
 
-	test->AddEventListener(DemoEvent::DemoEvent::eventType, printTheThing);
+	// test->AddEventListener(DemoEvent::DemoEvent::eventType, printTheThing);
 
 	using namespace std::chrono_literals;
 	// Make the thread sleep before doing the event. Not async yet

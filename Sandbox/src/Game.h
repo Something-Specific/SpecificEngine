@@ -16,6 +16,7 @@ namespace Demo
 		void Init();
 		Graphics::Texture2D Texture;
 		Maths::Vector2f Position;
+		Maths::Vector2f Size;
 	};
 
 } // namespace Demo

@@ -12,12 +12,13 @@ namespace Demo
 
 	void Game::Init()
 	{
-		Resources::ResourceLoader::LoadTexture("rsc/BasicTile.png", 0, "BasicTile");
+		Resources::ResourceLoader::LoadTexture("rsc/BasicTile.png", 1, "BasicTile");
 		GAME_INFO("Game initialized.");
 
 		// auto tileTex = Resources::ResourceLoader::GetTexture("BasicTile");
 		Texture = Resources::ResourceLoader::GetTexture("BasicTile");
-		Position = Maths::Vector2<float>(10.0f, 5.0f);
+		Position = Maths::Vector2<float>(20.0f, 20.0f);
+		Size = Maths::Vector2<float>(512.0f, 512.0f);
 
 		// auto sprite = new Gin::Display::Sprite(&tileTex, 100, 100, 32, 32);
 		// stage->AddChild(sprite);
@@ -35,6 +36,6 @@ namespace Demo
 	void Game::Render(Graphics::Renderer *renderer, float dt)
 	{
 		// stage->Render(renderer, dt);
-		renderer->Render(Texture, Position);
+		renderer->Render(Texture, Position, Size);
 	}
 } // namespace Demo
