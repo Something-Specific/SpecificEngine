@@ -1,6 +1,6 @@
 {
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
     "cmake.configureSettings": {
-        "CMAKE_TOOLCHAIN_FILE": "[vcpkg root]/scripts/buildsystems/vcpkg.cmake"
-    }
+        "CMAKE_TOOLCHAIN_FILE": "This is here to trick CMake into enabling Vcpkg. Set this value in User settings instead of workspace settings"
+      }
 }
