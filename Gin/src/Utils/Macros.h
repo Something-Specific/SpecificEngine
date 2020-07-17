@@ -16,8 +16,8 @@
 #define GAME_ERROR(...)       ::Gin::Log::GetGameLogger()->error(__VA_ARGS__)
 #define GAME_CRITICAL(...)    ::Gin::Log::GetGameLogger()->critical(__VA_ARGS__)
 
-#define CORE_ASSERT(...)	  ::Gin::Debug::Assert::CoreAssert(__VA_ARGS__)
-#define GAME_ASSERT(...)	  ::Gin::Debug::Assert::GameAssert(__VA_ARGS__)
+#define CORE_ASSERT(...)	  ::Gin::Util::Assert::CoreAssert(__VA_ARGS__)
+#define GAME_ASSERT(...)	  ::Gin::Util::Assert::GameAssert(__VA_ARGS__)
 
 #else
 #define CORE_TRACE(...)

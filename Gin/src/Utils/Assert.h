@@ -2,7 +2,7 @@
 
 
 namespace Gin {
-	namespace Debug {
+	namespace Util {
 
 		class Assert
 		{
