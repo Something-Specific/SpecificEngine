@@ -54,5 +54,13 @@ add_library(Gin
 set_target_properties(Gin PROPERTIES PUBLIC_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/src/Gin.h")
 target_include_directories(Gin PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
 
+<<<<<<< HEAD
 target_link_libraries(Gin PUBLIC gainput glad glfw3 glm nlohmann_json soil spdlog)
+=======
+target_link_libraries(Gin private 
+    glad::glad 
+    spdlog::spdlog 
+    nlohmann_json::nlohmann_json
+)
+>>>>>>> 61337f25da3ceb7ec220927a3f2507e71d964282
 
