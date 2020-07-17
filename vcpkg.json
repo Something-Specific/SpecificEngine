@@ -7,6 +7,7 @@
         "glm",
         "nlohmann-json",
         "devil",
-        "spdlog"
+        "spdlog",
+        "libpng"
     ]
 }

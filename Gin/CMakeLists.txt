@@ -6,6 +6,7 @@ find_package(nlohmann_json CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
 include_directories(${DevIL_INCLUDE_DIRS})
 find_package(DevIL REQUIRED)
+find_package(libpng CONFIG REQUIRED)
 
 add_library(Gin 
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Gin.h"
@@ -53,6 +54,6 @@ add_library(Gin
 set_target_properties(Gin PROPERTIES PUBLIC_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/src/Gin.h")
 target_include_directories(Gin PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src" PRIVATE ${IL_INCLUDE_DIR})
 
-target_link_libraries(Gin PUBLIC glad::glad glfw glm nlohmann_json::nlohmann_json ${IL_LIBRARIES} spdlog::spdlog)
+target_link_libraries(Gin PUBLIC png glad::glad glfw glm nlohmann_json::nlohmann_json ${IL_LIBRARIES} spdlog::spdlog)
 
 
