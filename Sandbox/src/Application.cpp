@@ -1,4 +1,7 @@
 
+
+#include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 #include "Gin.h"
 #include "Game.h"
 #include "EventsExample.h"
@@ -6,16 +9,17 @@
 #include <chrono>
 #include <thread>
 
-void printTheThing(const Gin::Events::Event& event) {
+void printTheThing(const Gin::Events::Event &event)
+{
 	printf("Hurray! The event was received!\n");
 }
 
 int main(int argc, char *argv[])
 {
 	Gin::Log::Init();
-	
-	Gin::Core::MasterGame* game = new Demo::Game();
-	Gin::Display::Actor* test = new Gin::Display::Actor();
+
+	Gin::Core::MasterGame *game = new Demo::Game();
+	Gin::Display::Actor *test = new Gin::Display::Actor();
 
 	test->AddEventListener(DemoEvent::DemoEvent::eventType, printTheThing);
 
@@ -25,7 +29,6 @@ int main(int argc, char *argv[])
 	test->DispatchEvent(DemoEvent::DemoEvent());
 
 	game->Run();
-
 
 	return 0;
 }

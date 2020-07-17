@@ -1,6 +1,5 @@
 
 find_package(glad CONFIG REQUIRED)
-find_package(spdlog CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
 
 add_library(Gin 
@@ -50,7 +49,6 @@ add_library(Gin
 set_target_properties(Gin PROPERTIES PUBLIC_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/src/Gin.h")
 
 target_link_libraries(Gin PRIVATE glad::glad)
-target_link_libraries(Gin PRIVATE spdlog::spdlog)
 target_link_libraries(Gin PRIVATE nlohmann_json::nlohmann_json)
 
 target_include_directories(Gin PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
