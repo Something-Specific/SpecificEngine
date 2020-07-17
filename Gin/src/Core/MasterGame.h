@@ -4,7 +4,6 @@
 
 #include "..\Graphics\Screen.h"
 #include "..\Graphics\Renderer.h"
-#include "..\Inputs\Summoner.h"
 #include "..\Inputs\Processor.h"
 #include "..\Display\Stage.h"
 
@@ -41,7 +40,7 @@ namespace Gin
 
 		private:
 			Graphics::Screen *screen;
-			Inputs::Summoner *summoner;
+			Inputs::Processor *inputProcessor;
 
 			time_point<steady_clock> LastUpdateTime;
 			time_point<steady_clock> LastRenderTime;

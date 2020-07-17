@@ -1,10 +1,9 @@
 
-# find_package(gainput CONFIG REQUIRED)
 find_package(glad CONFIG REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
-find_package(soil CONFIG REQUIRED)
+find_package(devil CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
 
 add_library(Gin 
@@ -37,8 +36,6 @@ add_library(Gin
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Inputs/Mouse.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Inputs/Processor.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Inputs/Processor.h"
-"${CMAKE_CURRENT_SOURCE_DIR}/src/Inputs/Summoner.cpp"
-"${CMAKE_CURRENT_SOURCE_DIR}/src/Inputs/Summoner.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Maths/Maths.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Maths/Vector2.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/GinConfig.hpp"
@@ -51,9 +48,10 @@ add_library(Gin
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Utils/Macros.h"
 )
 
+
 set_target_properties(Gin PROPERTIES PUBLIC_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/src/Gin.h")
 target_include_directories(Gin PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
 
-target_link_libraries(Gin PUBLIC gainput glad glfw3 glm nlohmann_json soil spdlog)
+target_link_libraries(Gin PUBLIC glad::glad glfw glm nlohmann_json::nlohmann_json SOIL spdlog::spdlog)
 
 
