@@ -20,7 +20,8 @@
 #include "Inputs\Mouse.h"
 #include "Inputs\Processor.h"
 
-#include "Systems\InputSystem.hpp"
+#include "Systems\InputSystem.h"
+#include "Systems\RenderSystem.h"
  
 #include "Resources\ResourceLoader.h"
 

@@ -1,9 +1,9 @@
 #pragma once
 
-#include <entt/entt.hpp>
+#include "RenderSystem.h"
 #include "../Components/Transform.hpp"
 #include "../Components/Sprite.hpp"
-#include "../Graphics/Renderer.h"
+#include "../Utils/Log.h"
 
 namespace Gin::ECS::Systems
 {

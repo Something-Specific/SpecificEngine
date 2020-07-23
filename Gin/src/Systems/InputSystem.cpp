@@ -1,4 +1,4 @@
-#include "InputSystem.hpp"
+#include "InputSystem.h"
 
 namespace Gin::ECS::Systems
 {

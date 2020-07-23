@@ -1,6 +1,5 @@
-#include "Scene.h";
-
-#include "..\Systems\RenderSystem.hpp"
+#include "Scene.h"
+#include "..\Systems\RenderSystem.h"
 
 namespace Gin::Core
 {
