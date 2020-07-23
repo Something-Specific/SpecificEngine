@@ -1,6 +1,9 @@
 #pragma once
 
 #include "Utils\Log.h"
+#include "Components\Body.hpp"
+#include "Components\Transform.hpp"
+#include "Components\Sprite.hpp"
 #include "Graphics\Renderer.h"
 #include "Graphics\Screen.h"
 #include "Graphics\Texture2d.h"

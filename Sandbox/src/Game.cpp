@@ -3,6 +3,7 @@
 
 namespace Demo
 {
+	using namespace Gin;
 	/*
 		The first thing to happen when the game enters run. This
 		should be the function to load in all the assets and
@@ -14,13 +15,11 @@ namespace Demo
 		Resources::ResourceLoader::LoadTexture("rsc/BasicTile.png", 1, "BasicTile");
 		GAME_INFO("Game initialized.");
 
-		// auto tileTex = Resources::ResourceLoader::GetTexture("BasicTile");
-		Texture = Resources::ResourceLoader::GetTexture("BasicTile");
-		Position = glm::vec2(20, 20);
-		Size = glm::vec2(512.0, 512.0);
+		auto tileTex = Resources::ResourceLoader::GetTexture("BasicTile");
 
-		// auto sprite = new Gin::Display::Sprite(&tileTex, 100, 100, 32, 32);
-		// stage->AddChild(sprite);
+		// entt::entity test = Scene->Registry.create();
+		// Scene->Registry.emplace<Gin::Components::Transform>(test, glm::vec2(20, 20), glm::vec2(512, 512), 0);
+		// Scene->Registry.emplace<Gin::Components::Sprite>(test, tileTex);
 	}
 
 	/*
@@ -29,11 +28,11 @@ namespace Demo
 	*/
 	void Game::Update(Inputs::Processor *processor, float dt)
 	{
+		// Scene->Update(processor, dt);
 	}
 
 	void Game::Render(Graphics::Renderer *renderer, float dt)
 	{
-		// stage->Render(renderer, dt);
-		renderer->Render(Texture, Position, Size);
+		// Scene->Update(processor, dt);
 	}
 } // namespace Demo

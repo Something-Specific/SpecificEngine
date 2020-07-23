@@ -40,6 +40,7 @@ add_library(Gin
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/GinConfig.hpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/ResourceLoader.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/ResourceLoader.h"
+"${CMAKE_CURRENT_SOURCE_DIR}/src/Systems/RenderSystem.hpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Systems/TestSystem.hpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Utils/Assert.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Utils/Assert.h"
