@@ -6,5 +6,4 @@ namespace Gin::ECS::Systems
     {
         return 0;
     }
-} // namespace Gin::ECS::Systems
-#endif
+}

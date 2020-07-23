@@ -6,8 +6,9 @@
     ],
     "settings": {
         "files.associations": {
+            "iostream": "cpp",
             "xstring": "cpp",
-            "iostream": "cpp"
+            "chrono": "cpp"
         }
     }
 }
