@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	Gin::Log::Init();
 
-	Gin::Core::MasterGame game = Demo::Game();
+	Gin::Core::MasterGame* game = new Demo::Game();
 
 	// test->AddEventListener(DemoEvent::DemoEvent::eventType, printTheThing);
 
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	// Make the thread sleep before doing the event. Not async yet
 	std::this_thread::sleep_for(1s);
 
-	game.Run();
+	game->Run();
 
 	return 0;
 }
