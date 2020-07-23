@@ -15,6 +15,8 @@ add_library(Gin
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Components/Sprite.hpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Core/MasterGame.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Core/MasterGame.h"
+"${CMAKE_CURRENT_SOURCE_DIR}/src/Core/Scene.cpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/src/Core/Scene.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Events/Event.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Events/EventDispatcher.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Events/EventDispatcher.h"
@@ -49,7 +51,7 @@ add_library(Gin
 set_target_properties(Gin PROPERTIES PUBLIC_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/src/Gin.h")
 target_include_directories(Gin PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src" PRIVATE ${IL_INCLUDE_DIR})
 
-target_link_libraries(Gin PUBLIC png glad::glad glfw glm nlohmann_json::nlohmann_json ${IL_LIBRARIES} spdlog::spdlog PRIVATE EnTT::EnTT)
+target_link_libraries(Gin PUBLIC png glad::glad glfw glm nlohmann_json::nlohmann_json ${IL_LIBRARIES} spdlog::spdlog EnTT::EnTT)
 
 
 target_compile_features(Gin PUBLIC cxx_std_20)
