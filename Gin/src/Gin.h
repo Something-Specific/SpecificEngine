@@ -10,7 +10,5 @@
 #include "Inputs\Mouse.h"
 #include "Resources\ResourceLoader.h"
 #include "Inputs\Processor.h"
-#include "Display\Stage.h"
-#include "Display\Actor.h"
 
 #include "Core\MasterGame.h"

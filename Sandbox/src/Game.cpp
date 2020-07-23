@@ -29,7 +29,6 @@ namespace Demo
 	*/
 	void Game::Update(Inputs::Processor *processor, float dt)
 	{
-		stage->Update(processor, dt);
 	}
 
 	void Game::Render(Graphics::Renderer *renderer, float dt)

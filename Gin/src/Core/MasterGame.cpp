@@ -32,15 +32,12 @@ namespace Gin
 			LastFPSRefresh = high_resolution_clock::now();
 
 			CORE_INFO("Gin initialized.");
-
-			stage = new Stage();
 		}
 
 		MasterGame::~MasterGame()
 		{
 			screen->~Screen();
 			inputProcessor->~Processor();
-			stage->~Stage();
 		}
 
 		void MasterGame::Run()

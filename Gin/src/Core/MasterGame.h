@@ -5,7 +5,6 @@
 #include "..\Graphics\Screen.h"
 #include "..\Graphics\Renderer.h"
 #include "..\Inputs\Processor.h"
-#include "..\Display\Stage.h"
 
 constexpr auto FPS_REFRESH_RATE = 0.25;
 constexpr auto UPDATE_TIME_STEP = 1666667;
@@ -15,7 +14,6 @@ namespace Gin
 {
 	namespace Core
 	{
-		using namespace Display;
 		using namespace Graphics;
 		using namespace Inputs;
 		using namespace std::chrono;
@@ -34,8 +32,6 @@ namespace Gin
 			virtual void Render(Graphics::Renderer *renderer, float dt) {}
 
 		protected:
-			Display::Stage *stage;
-
 			virtual void Init() {}
 
 		private:
