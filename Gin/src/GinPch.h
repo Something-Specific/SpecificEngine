@@ -7,8 +7,7 @@
 #include <functional>
 #include <fstream>
 #include <stdint.h>
-#include <stdlib.h> 
-
+#include <stdlib.h>
 
 #include <string>
 #include <sstream>
@@ -18,18 +17,14 @@
 #include <unordered_map>
 #include <unordered_set>
 
-
 #include <Windows.h>
 
-
 #include <glad\glad.h>
-#include <glfw\glfw3.h>
+#include <GLFW\glfw3.h>
 #include <glm\glm.hpp>
 #include <glm\gtc\type_ptr.hpp>
 #include <glm\gtc\matrix_transform.hpp>
 
-
 #include "Inputs\Keys.h"
 #include "Maths\Maths.h"
 #include "Utils\Macros.h"
-

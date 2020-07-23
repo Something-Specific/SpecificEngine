@@ -18,7 +18,7 @@ namespace Gin
 		MasterGame::MasterGame(float width, float height)
 		{
 			screen = new Screen(width, height);
-			summoner = new Summoner(width, height);
+			inputProcessor = new Processor();
 
 			//In ticks 1/60 of a seconds.
 			TargetTimeStep = UPDATE_TIME_STEP;
@@ -34,7 +34,7 @@ namespace Gin
 		MasterGame::~MasterGame()
 		{
 			screen->~Screen();
-			summoner->~Summoner();
+			inputProcessor->~Processor();
 			stage->~Stage();
 		}
 
@@ -48,7 +48,7 @@ namespace Gin
 				glfwPollEvents();
 
 				//Process input
-				summoner->Update();
+				// TODO
 
 				//Update Loop
 				auto time = high_resolution_clock::now();
@@ -60,12 +60,12 @@ namespace Gin
 					while (CumulativeDt >= TargetTimeStep)
 					{
 						auto dt = static_cast<float>(TargetTimeStep / (TICKS_IN_SECOND * 1.0));
-						Update(summoner->processor, dt);
+						Update(inputProcessor, dt);
 						CumulativeDt -= TargetTimeStep;
 					}
 				}
 				else { //Fast as possible
-					Update(summoner->processor, static_cast<float>(dur.count()));
+					Update(inputProcessor, static_cast<float>(dur.count()));
 				}
 				LastUpdateTime = high_resolution_clock::now();
 

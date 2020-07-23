@@ -5,11 +5,14 @@
 #include "../Graphics/Texture2D.h"
 #include "../Graphics/Shader.h"
 
-namespace Gin 
+#include <IL\il.h>
+#include <IL\ilu.h>
+
+namespace Gin
 {
 	namespace Resources
 	{
-		class  ResourceLoader
+		class ResourceLoader
 		{
 		public:
 			// Resource storage
@@ -24,7 +27,7 @@ namespace Gin
 
 			// Loads (and generates) a shader program from file loading vertex, fragment (and geometry) shader's source code. If gShaderFile is not nullptr, it also loads a geometry shader
 			static Graphics::Shader LoadShader(const char *vShaderFile, const char *fShaderFile, const char *gShaderFile, std::string name);
-			
+
 			// Retrieves a stored sader
 			static Graphics::Shader GetShader(std::string name);
 
@@ -32,11 +35,15 @@ namespace Gin
 			static void Clear();
 
 		private:
+			static char Initialized;
+
+			static void Init();
+
 			// Loads a single texture from file
 			static Graphics::Texture2D loadTextureFromFile(const char *file, unsigned char alpha);
 
 			// Loads and generates a shader from file
 			static Graphics::Shader loadShaderFromFile(const char *vShaderFile, const char *fShaderFile, const char *gShaderFile = nullptr);
 		};
-	}
-}
+	} // namespace Resources
+} // namespace Gin

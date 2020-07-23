@@ -1,6 +1,5 @@
 #pragma once
 
-//Helper functions
 #include "Utils\Log.h"
 #include "Graphics\Renderer.h"
 #include "Graphics\Screen.h"
@@ -15,7 +14,4 @@
 #include "Display\Actor.h"
 #include "Display\Sprite.h"
 
-
-//Engine core
 #include "Core\MasterGame.h"
-

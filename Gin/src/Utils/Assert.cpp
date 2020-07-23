@@ -4,19 +4,35 @@
 #include "Assert.h"
 
 namespace Gin {
-	namespace Debug {
+	namespace Util {
+
+
+		void Assert::CoreAssert(bool condition) {
+			CoreAssert(condition, NULL);
+		}
 
 		void Assert::CoreAssert(bool condition, const char* failMsg) {
 			if (!condition) {
-				CORE_CRITICAL("Core assertion failed, going down.");
-				CORE_CRITICAL("Core assertion failure message, {0}", failMsg);
+				if(!failMsg) {
+					CORE_CRITICAL("Core assertion failed, going down.");
+				} else {
+					CORE_CRITICAL("Core assertion failure message, {0}", failMsg);
+				}
 				exit(EXIT_FAILURE);
 			}
 		}
+
+		void Assert::GameAssert(bool condition) {
+			CoreAssert(condition, NULL);
+		}
+
 		void Assert::GameAssert(bool condition, const char* failMsg) {
 			if (!condition) {
-				GAME_CRITICAL("Core assertion failed, going down.");
-				GAME_CRITICAL("Core assertion failure message, {0}", failMsg);
+				if(!failMsg) {
+					GAME_CRITICAL("Core assertion failed, going down.");
+				} else {
+					GAME_CRITICAL("Core assertion failure message, {0}", failMsg);
+				}
 				exit(EXIT_FAILURE);
 			}
 		}

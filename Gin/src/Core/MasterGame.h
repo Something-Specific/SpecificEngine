@@ -4,7 +4,6 @@
 
 #include "..\Graphics\Screen.h"
 #include "..\Graphics\Renderer.h"
-#include "..\Inputs\Summoner.h"
 #include "..\Inputs\Processor.h"
 #include "..\Display\Stage.h"
 
@@ -16,7 +15,7 @@ namespace Gin
 {
 	namespace Core
 	{
-		using namespace Display; 
+		using namespace Display;
 		using namespace Graphics;
 		using namespace Inputs;
 		using namespace std::chrono;
@@ -24,7 +23,6 @@ namespace Gin
 		class MasterGame
 		{
 		public:
-
 			MasterGame(float width = 640, float height = 480);
 			~MasterGame();
 
@@ -36,13 +34,13 @@ namespace Gin
 			virtual void Render(Graphics::Renderer *renderer, float dt) {}
 
 		protected:
-			Display::Stage* stage;
+			Display::Stage *stage;
 
 			virtual void Init() {}
 
 		private:
-			Graphics::Screen* screen;
-			Inputs::Summoner* summoner;
+			Graphics::Screen *screen;
+			Inputs::Processor *inputProcessor;
 
 			time_point<steady_clock> LastUpdateTime;
 			time_point<steady_clock> LastRenderTime;
@@ -51,5 +49,5 @@ namespace Gin
 			uint64_t TargetTimeStep;
 			uint64_t FramesElapsed;
 		};
-	}
-}
+	} // namespace Core
+} // namespace Gin

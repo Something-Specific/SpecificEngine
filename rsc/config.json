@@ -1,0 +1,19 @@
+{
+  "Input": [
+    {
+      "type": "InputDevicePad",
+      "buttons": {
+        "Primary": "PadButtonA",
+        "Secondary": "PadButtonX"
+      }
+    },
+    {
+      "type": "InputDeviceMouse",
+      "buttons": {
+        "Primary": "MouseButtonLeft",
+        "Secondary": "MouseButtonRight"
+      }
+    }
+  ]
+
+}

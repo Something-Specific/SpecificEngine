@@ -2,15 +2,22 @@
 #include "..\GinPch.h"
 #include "ResourceLoader.h"
 
-#include <soil\SOIL.h>
-
-namespace Gin 
+namespace Gin
 {
-	namespace Resources 
+	namespace Resources
 	{
 
 		std::map<std::string, Graphics::Texture2D> ResourceLoader::Textures;
 		std::map<std::string, Graphics::Shader> ResourceLoader::Shaders;
+
+		char ResourceLoader::Initialized = 0;
+
+		void ResourceLoader::Init()
+		{
+			Initialized = 1;
+			ilInit();
+			ilClearColour(255, 255, 255, 0);
+		}
 
 		Graphics::Texture2D ResourceLoader::LoadTexture(const char *file, unsigned char alpha, std::string name)
 		{
@@ -36,6 +43,9 @@ namespace Gin
 
 		Graphics::Texture2D ResourceLoader::loadTextureFromFile(const char *file, unsigned char alpha)
 		{
+			if (!Initialized)
+				Init();
+
 			// Create Texture object
 			Graphics::Texture2D texture;
 			if (alpha)
@@ -43,13 +53,28 @@ namespace Gin
 				texture.Internal_Format = GL_RGBA;
 				texture.Image_Format = GL_RGBA;
 			}
-			// Load image
-			int width, height;
-			unsigned char* image = SOIL_load_image(file, &width, &height, 0, texture.Image_Format == GL_RGBA ? SOIL_LOAD_RGBA : SOIL_LOAD_RGB);
-			// Now generate texture
-			texture.Generate(width, height, image);
-			// And finally free image data
-			SOIL_free_image_data(image);
+
+			ILuint imgID = 0;
+			ilGenImages(1, &imgID);
+			ilBindImage(imgID);
+
+			auto success = ilLoadImage(file);
+			if (success == IL_TRUE)
+			{
+				success = ilConvertImage(IL_RGBA, IL_UNSIGNED_BYTE);
+				if (success == IL_TRUE)
+				{
+					unsigned int width = ilGetInteger(IL_IMAGE_WIDTH);
+					unsigned int height = ilGetInteger(IL_IMAGE_HEIGHT);
+					unsigned char *pixels = ilGetData();
+					texture.Generate(width, height, pixels);
+				}
+			}
+			else
+			{
+				CORE_ERROR("Unable to load image.");
+			}
+
 			return texture;
 		}
 
@@ -102,5 +127,5 @@ namespace Gin
 			for (auto iter : Textures)
 				glDeleteTextures(1, &iter.second.Id);
 		}
-	}
-}
+	} // namespace Resources
+} // namespace Gin
