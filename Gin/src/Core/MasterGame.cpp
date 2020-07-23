@@ -11,6 +11,8 @@
 #include <string.h>
 #include <entt/entt.hpp>
 
+#include "../Systems/TestSystem.hpp"
+
 namespace Gin
 {
 	namespace Core
@@ -20,6 +22,8 @@ namespace Gin
 		{
 			screen = new Screen(width, height);
 			inputProcessor = new Processor();
+
+			Gin::ECS::Systems::TestSystemFunction();
 
 			//In ticks 1/60 of a seconds.
 			TargetTimeStep = UPDATE_TIME_STEP;
