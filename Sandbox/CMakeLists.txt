@@ -1,5 +1,12 @@
-file(GLOB_RECURSE fileCollection "src/*.cpp")
-add_executable(Sandbox ${fileCollection})
+
+# find_package(EnTT CONFIG REQUIRED)
+
+add_executable(Sandbox 
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/Application.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/Game.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/Game.h"
+)
+
 
 target_link_libraries(Sandbox PUBLIC Gin)
 

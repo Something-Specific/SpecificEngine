@@ -1,8 +1,6 @@
 #pragma once
 
 #include "Gin.h"
-#include <glm/glm.hpp>
-#include <entt/entt.hpp>
 
 namespace Demo
 {

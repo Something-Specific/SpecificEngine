@@ -2,6 +2,7 @@
 
 #include "..\GinPch.h"
 
+#include "Scene.h"
 #include "..\Graphics\Screen.h"
 #include "..\Graphics\Renderer.h"
 #include "..\Inputs\Processor.h"
@@ -14,9 +15,6 @@ namespace Gin
 {
 	namespace Core
 	{
-		using namespace Graphics;
-		using namespace Inputs;
-		using namespace std::chrono;
 
 		class MasterGame
 		{
@@ -32,15 +30,17 @@ namespace Gin
 			virtual void Render(Graphics::Renderer *renderer, float dt) {}
 
 		protected:
+			Scene *scene;
+
 			virtual void Init() {}
 
 		private:
 			Graphics::Screen *screen;
 			Inputs::Processor *inputProcessor;
 
-			time_point<steady_clock> LastUpdateTime;
-			time_point<steady_clock> LastRenderTime;
-			time_point<steady_clock> LastFPSRefresh;
+			std::chrono::time_point<std::chrono::steady_clock> LastUpdateTime;
+			std::chrono::time_point<std::chrono::steady_clock> LastRenderTime;
+			std::chrono::time_point<std::chrono::steady_clock> LastFPSRefresh;
 			uint64_t CumulativeDt; //In ticks
 			uint64_t TargetTimeStep;
 			uint64_t FramesElapsed;

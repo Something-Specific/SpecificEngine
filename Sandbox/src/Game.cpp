@@ -1,9 +1,12 @@
 
 #include "Game.h"
 
+#include <entt/entt.hpp>
+
 namespace Demo
 {
 	using namespace Gin;
+	using namespace ECS::Components;
 	/*
 		The first thing to happen when the game enters run. This
 		should be the function to load in all the assets and
@@ -16,10 +19,13 @@ namespace Demo
 		GAME_INFO("Game initialized.");
 
 		auto tileTex = Resources::ResourceLoader::GetTexture("BasicTile");
+		auto transform = Transform(glm::vec2(20, 20), glm::vec2(512, 512), 0);
+		auto sprite = Sprite(tileTex);
 
-		// entt::entity test = Scene->Registry.create();
-		// Scene->Registry.emplace<Gin::Components::Transform>(test, glm::vec2(20, 20), glm::vec2(512, 512), 0);
-		// Scene->Registry.emplace<Gin::Components::Sprite>(test, tileTex);
+		auto test = scene->getRegistry().create();
+
+		scene->getRegistry().emplace<Transform>(test, transform);
+		scene->getRegistry().emplace<Sprite>(test, sprite);
 	}
 
 	/*
@@ -28,11 +34,11 @@ namespace Demo
 	*/
 	void Game::Update(Inputs::Processor *processor, float dt)
 	{
-		// Scene->Update(processor, dt);
+		scene->Update(processor, dt);
 	}
 
 	void Game::Render(Graphics::Renderer *renderer, float dt)
 	{
-		// Scene->Update(processor, dt);
+		scene->Render(renderer, dt);
 	}
 } // namespace Demo
