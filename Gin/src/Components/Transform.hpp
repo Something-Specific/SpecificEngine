@@ -3,30 +3,22 @@
 #include "..\GinPch.h"
 #include <glm/glm.hpp>
 
-namespace Gin
+namespace Gin::ECS::Components
 {
-    namespace ECS
+    struct Transform
     {
-        namespace Components
+        glm::vec2 Position;
+        glm::vec2 Scale;
+        float Rotation;
+
+        Transform() = default;
+        Transform(const Transform &) = default;
+        Transform(const glm::vec2 &position, const glm::vec2 &scale, const float rotation)
         {
-            struct Transform
-            {
-                glm::vec2 Position;
-                glm::vec2 Scale;
-                float Rotation;
+            Position = position;
+            Scale = scale;
+            Rotation = rotation;
+        }
+    };
 
-                Transform() = default;
-                Transform(const Transform &) = default;
-                Transform(const glm::vec2 &position, const glm::vec2 &scale, const float rotation)
-                {
-                    Position = position;
-                    Scale = scale;
-                    Rotation = rotation;
-                }
-            };
-
-        } // namespace Components
-
-    } // namespace ECS
-
-} // namespace Gin
+} // namespace Gin::ECS::Components

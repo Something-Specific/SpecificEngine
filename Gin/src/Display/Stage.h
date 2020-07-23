@@ -7,22 +7,20 @@
 
 #include <list>
 
-namespace Gin {
-	namespace Display {
-		class Stage
-		{
-		public:
-			Stage();
-			~Stage();
+namespace Gin::Display
+{
+	class Stage
+	{
+	public:
+		Stage();
+		~Stage();
 
-			void AddChild(Actor* actor);
-			void RemoveChild(Actor* actor);
-			void Update(Inputs::Processor* processor, float dt);
-			void Render(Graphics::Renderer* renderer, float dt);
+		void AddChild(Actor *actor);
+		void RemoveChild(Actor *actor);
+		void Update(Inputs::Processor *processor, float dt);
+		void Render(Graphics::Renderer *renderer, float dt);
 
-		private:
-			std::list<Actor*>* Actors;
-		};
-	}
-}
-
+	private:
+		std::list<Actor *> *Actors;
+	};
+} // namespace Gin::Display

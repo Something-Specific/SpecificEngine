@@ -3,24 +3,16 @@
 #include "..\GinPch.h"
 #include <glm/glm.hpp>
 
-namespace Gin
+namespace Gin::ECS::Components
 {
-    namespace ECS
+    struct Body
     {
-        namespace Components
-        {
-            struct Body
-            {
-                glm::vec2 Size;
+        glm::vec2 Size;
 
-                Body() = default;
-                Body(const Body &) = default;
-                Body(const glm::vec2 &size)
-                    : Size(size) {}
-            };
+        Body() = default;
+        Body(const Body &) = default;
+        Body(const glm::vec2 &size)
+            : Size(size) {}
+    };
 
-        } // namespace Components
-
-    } // namespace ECS
-
-} // namespace Gin
+} // namespace Gin::ECS::Components

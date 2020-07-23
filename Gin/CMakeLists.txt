@@ -10,9 +10,9 @@ find_package(EnTT CONFIG REQUIRED)
 
 add_library(Gin 
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Gin.h"
-"${CMAKE_CURRENT_SOURCE_DIR}/src/Components/Body.h"
-"${CMAKE_CURRENT_SOURCE_DIR}/src/Components/Transform.h"
-"${CMAKE_CURRENT_SOURCE_DIR}/src/Components/Sprite.h"
+"${CMAKE_CURRENT_SOURCE_DIR}/src/Components/Body.hpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/src/Components/Transform.hpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/src/Components/Sprite.hpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Core/MasterGame.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Core/MasterGame.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Display/Actor.cpp"
@@ -41,8 +41,6 @@ add_library(Gin
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Inputs/Mouse.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Inputs/Processor.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Inputs/Processor.h"
-"${CMAKE_CURRENT_SOURCE_DIR}/src/Maths/Maths.h"
-"${CMAKE_CURRENT_SOURCE_DIR}/src/Maths/Vector2.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/GinConfig.hpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/ResourceLoader.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/ResourceLoader.h"
