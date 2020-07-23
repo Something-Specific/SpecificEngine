@@ -28,10 +28,10 @@ namespace Demo
 		scene->getRegistry().emplace<Transform>(test, transform);
 		scene->getRegistry().emplace<Sprite>(test, sprite);
 
-		auto processor = new Inputs::Processor();
-		auto &pref = *processor;
+		// auto processor = new Inputs::Processor();
+		// auto &pref = *processor;
 
-		Gin::ECS::Systems::InputSystem(scene->getRegistry(), pref);
+		// Gin::ECS::Systems::InputSystem(scene->getRegistry(), pref);
 	}
 
 	/*
