@@ -1,13 +1,14 @@
 {
-    "name": "gin",
-    "version-string": "0.1.0",
-    "dependencies": [
-        "glad",
-        "glfw3",
-        "glm",
-        "nlohmann-json",
-        "devil",
-        "spdlog",
-        "libpng"
-    ]
+	"name": "gin",
+	"version-string": "0.1.0",
+	"dependencies": [
+		"glad",
+		"glfw3",
+		"glm",
+		"nlohmann-json",
+		"devil",
+		"spdlog",
+		"libpng",
+		"entt"
+	]
 }

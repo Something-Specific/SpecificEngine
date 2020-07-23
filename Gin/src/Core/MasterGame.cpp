@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <entt/entt.hpp>
 
 namespace Gin
 {
@@ -53,7 +54,8 @@ namespace Gin
 				//Update Loop
 				auto time = high_resolution_clock::now();
 				auto dur = duration_cast<duration<double>>(time - LastUpdateTime);
-				if (TargetTimeStep) { //Fixed time step
+				if (TargetTimeStep)
+				{ //Fixed time step
 
 					//Time since last time in ticks (1 second = 10,000,000 seconds)
 					CumulativeDt += static_cast<uint64_t>(dur.count() * TICKS_IN_SECOND);
@@ -64,7 +66,8 @@ namespace Gin
 						CumulativeDt -= TargetTimeStep;
 					}
 				}
-				else { //Fast as possible
+				else
+				{ //Fast as possible
 					Update(inputProcessor, static_cast<float>(dur.count()));
 				}
 				LastUpdateTime = high_resolution_clock::now();
@@ -82,7 +85,6 @@ namespace Gin
 					LastFPSRefresh = high_resolution_clock::now();
 				}
 
-
 				//Render Loop
 				screen->Start();
 				dur = duration_cast<duration<double>>(high_resolution_clock::now() - LastRenderTime);
@@ -94,15 +96,14 @@ namespace Gin
 			glfwTerminate();
 		}
 
-
 		void MasterGame::SetTimeStep(int ticks)
 		{
 			TargetTimeStep = ticks;
 		}
-		
+
 		void MasterGame::SetTimeStep(double seconds)
 		{
 			TargetTimeStep = TICKS_IN_SECOND * seconds;
 		}
-	}
-}
+	} // namespace Core
+} // namespace Gin
