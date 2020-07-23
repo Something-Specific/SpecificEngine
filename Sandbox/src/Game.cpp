@@ -1,5 +1,4 @@
 
-
 #include "Game.h"
 
 namespace Demo
@@ -17,8 +16,8 @@ namespace Demo
 
 		// auto tileTex = Resources::ResourceLoader::GetTexture("BasicTile");
 		Texture = Resources::ResourceLoader::GetTexture("BasicTile");
-		Position = Maths::Vector2<float>(20.0f, 20.0f);
-		Size = Maths::Vector2<float>(512.0f, 512.0f);
+		Position = glm::vec2(20, 20);
+		Size = glm::vec2(512.0, 512.0);
 
 		// auto sprite = new Gin::Display::Sprite(&tileTex, 100, 100, 32, 32);
 		// stage->AddChild(sprite);

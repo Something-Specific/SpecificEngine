@@ -17,8 +17,6 @@ add_library(Gin
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Core/MasterGame.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Display/Actor.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Display/Actor.h"
-"${CMAKE_CURRENT_SOURCE_DIR}/src/Display/Sprite.cpp"
-"${CMAKE_CURRENT_SOURCE_DIR}/src/Display/Sprite.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Display/Stage.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Display/Stage.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Events/Event.h"

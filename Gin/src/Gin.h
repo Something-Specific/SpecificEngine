@@ -12,6 +12,5 @@
 #include "Inputs\Processor.h"
 #include "Display\Stage.h"
 #include "Display\Actor.h"
-#include "Display\Sprite.h"
 
 #include "Core\MasterGame.h"
