@@ -3,6 +3,7 @@
 
 #include <entt/entt.hpp>
 
+
 namespace Demo
 {
 	using namespace Gin;
@@ -26,6 +27,11 @@ namespace Demo
 
 		scene->getRegistry().emplace<Transform>(test, transform);
 		scene->getRegistry().emplace<Sprite>(test, sprite);
+
+		auto processor = new Inputs::Processor();
+		auto &pref = *processor;
+
+		Gin::ECS::Systems::InputSystem(scene->getRegistry(), pref);
 	}
 
 	/*

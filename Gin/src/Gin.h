@@ -6,10 +6,9 @@
 #include "Components\Body.hpp"
 #include "Components\Transform.hpp"
 #include "Components\Sprite.hpp"
-
+#include "Components\Input.hpp"
 #include "Core\MasterGame.h"
 #include "Core\Scene.h"
-
 #include "Graphics\Renderer.h"
 #include "Graphics\Screen.h"
 #include "Graphics\Texture2d.h"
@@ -21,6 +20,8 @@
 #include "Inputs\Mouse.h"
 #include "Inputs\Processor.h"
 
+#include "Systems\InputSystem.hpp"
+ 
 #include "Resources\ResourceLoader.h"
 
 #include "Utils\Log.h"
