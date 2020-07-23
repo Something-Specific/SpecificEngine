@@ -6,7 +6,8 @@
     ],
     "settings": {
         "files.associations": {
-            "xstring": "cpp"
+            "xstring": "cpp",
+            "iostream": "cpp"
         }
     }
 }

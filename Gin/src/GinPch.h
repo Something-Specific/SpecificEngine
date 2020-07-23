@@ -26,5 +26,4 @@
 #include <glm\gtc\matrix_transform.hpp>
 
 #include "Inputs\Keys.h"
-#include "Maths\Maths.h"
 #include "Utils\Macros.h"
