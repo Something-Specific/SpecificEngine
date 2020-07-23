@@ -1,4 +1,3 @@
-
 find_package(glad CONFIG REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
@@ -44,6 +43,7 @@ add_library(Gin
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/GinConfig.hpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/ResourceLoader.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/ResourceLoader.h"
+"${CMAKE_CURRENT_SOURCE_DIR}/src/Systems/TestSystem.hpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Utils/Assert.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Utils/Assert.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Utils/Log.cpp"
@@ -51,10 +51,7 @@ add_library(Gin
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Utils/Macros.h"
 )
 
-
 set_target_properties(Gin PROPERTIES PUBLIC_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/src/Gin.h")
 target_include_directories(Gin PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src" PRIVATE ${IL_INCLUDE_DIR})
 
-target_link_libraries(Gin PUBLIC png glad::glad glfw glm nlohmann_json::nlohmann_json ${IL_LIBRARIES} spdlog::spdlog EnTT::EnTT)
-
-
+target_link_libraries(Gin PUBLIC png glad::glad glfw glm nlohmann_json::nlohmann_json ${IL_LIBRARIES} spdlog::spdlog PRIVATE EnTT::EnTT)
