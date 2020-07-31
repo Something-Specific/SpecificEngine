@@ -2,16 +2,32 @@
 
 namespace Gin::ECS::Systems
 {
-    void InputSystem(entt::registry &registry, Inputs::Processor &inputProcessor)
+    void InputSystem(entt::registry &registry, Inputs::Processor &input)
     {
-        auto renderable = registry.view<Components::Input>();
-        for (auto entity : renderable)
+        auto controllable = registry.view<Components::Input, Components::Transform>();
+        for (auto entity : controllable)
         {
-            //auto [sprite, transform] = renderable.get<Components::Sprite, Components::Transform>(entity);
-            //renderer.Render(sprite.Texture, transform.Position, transform.Rotation);
+            auto &transform = controllable.get<Components::Transform>(entity);
 
+            if (input.KeyboardState->IsKeyDown(Inputs::Keys::W))
+            {
+                transform.Position.y -= 1;
+            }
 
-            //inputProcessor.
+            if (input.KeyboardState->IsKeyDown(Inputs::Keys::S))
+            {
+                transform.Position.y += 1;
+            }
+
+            if (input.KeyboardState->IsKeyDown(Inputs::Keys::D))
+            {
+                transform.Position.x += 1;
+            }
+
+            if (input.KeyboardState->IsKeyDown(Inputs::Keys::A))
+            {
+                transform.Position.x -= 1;
+            }
         }
     };
 } // namespace Gin::ECS::Systems

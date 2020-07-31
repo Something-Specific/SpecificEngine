@@ -8,8 +8,9 @@
 #include "..\Inputs\Processor.h"
 
 constexpr auto FPS_REFRESH_RATE = 0.25;
-constexpr auto UPDATE_TIME_STEP = 1666667;
-constexpr auto TICKS_IN_SECOND = 10000000;
+// constexpr auto UPDATE_TIME_STEP = 0.016666666666666666; // 60hz
+constexpr auto UPDATE_TIME_STEP = 0.008333333333333333; // 120hz
+// constexpr auto UPDATE_TIME_STEP = 0.004166666666666666; // 240hz
 
 namespace Gin
 {
@@ -23,7 +24,6 @@ namespace Gin
 			~MasterGame();
 
 			void Run();
-			void SetTimeStep(int ticks);
 			void SetTimeStep(double seconds);
 
 			virtual void Update(Inputs::Processor *processor, float dt) {}
@@ -41,9 +41,9 @@ namespace Gin
 			std::chrono::time_point<std::chrono::steady_clock> LastUpdateTime;
 			std::chrono::time_point<std::chrono::steady_clock> LastRenderTime;
 			std::chrono::time_point<std::chrono::steady_clock> LastFPSRefresh;
-			uint64_t CumulativeDt; //In ticks
-			uint64_t TargetTimeStep;
-			uint64_t FramesElapsed;
+			double CumulativeDt; //In ticks
+			double TargetTimeStep;
+			double FramesElapsed;
 		};
 	} // namespace Core
 } // namespace Gin

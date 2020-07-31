@@ -10,16 +10,15 @@ namespace Gin
 {
 	namespace Inputs
 	{
-		class  Processor
+		class Processor
 		{
 		public:
 			Controller *ControllerState;
 			Keyboard *KeyboardState;
 			Mouse *MouseState;
 
-			Processor(/*GLFWwindow *window*/);
+			Processor(GLFWwindow *window);
 			~Processor();
-
 		};
-	}
-}
+	} // namespace Inputs
+} // namespace Gin

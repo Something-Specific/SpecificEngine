@@ -7,13 +7,13 @@
 
 namespace Gin::ECS::Systems
 {
-    void RenderSystem(Graphics::Renderer *renderer, entt::registry &registry)
+    void RenderSystem(entt::registry &registry, Graphics::Renderer &renderer)
     {
         auto renderable = registry.view<Components::Sprite, Components::Transform>();
         for (auto entity : renderable)
         {
             auto [sprite, transform] = renderable.get<Components::Sprite, Components::Transform>(entity);
-            renderer->Render(sprite.Texture, transform.Position, transform.Rotation);
+            renderer.Render(sprite.Texture, transform.Position, transform.Rotation);
         }
     }
 } // namespace Gin::ECS::Systems

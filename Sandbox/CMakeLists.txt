@@ -8,6 +8,7 @@ add_executable(Sandbox
 )
 
 
+
 target_link_libraries(Sandbox PUBLIC Gin)
 
 add_custom_command(TARGET Sandbox
@@ -16,3 +17,4 @@ add_custom_command(TARGET Sandbox
           "${CMAKE_CURRENT_SOURCE_DIR}/rsc" 
           "$<TARGET_FILE_DIR:Sandbox>/rsc"
 )
+

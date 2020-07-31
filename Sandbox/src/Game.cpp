@@ -3,7 +3,6 @@
 
 #include <entt/entt.hpp>
 
-
 namespace Demo
 {
 	using namespace Gin;
@@ -22,11 +21,13 @@ namespace Demo
 		auto tileTex = Resources::ResourceLoader::GetTexture("BasicTile");
 		auto transform = Transform(glm::vec2(20, 20), glm::vec2(512, 512), 0);
 		auto sprite = Sprite(tileTex);
+		auto input = Input();
 
 		auto test = scene->getRegistry().create();
 
 		scene->getRegistry().emplace<Transform>(test, transform);
 		scene->getRegistry().emplace<Sprite>(test, sprite);
+		scene->getRegistry().emplace<Input>(test, input);
 
 		// auto processor = new Inputs::Processor();
 		// auto &pref = *processor;

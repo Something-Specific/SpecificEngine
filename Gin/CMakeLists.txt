@@ -1,3 +1,4 @@
+
 find_package(glad CONFIG REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
@@ -48,6 +49,7 @@ add_library(Gin
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Utils/Log.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Utils/Macros.h"
 )
+
 
 set_target_properties(Gin PROPERTIES PUBLIC_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/src/Gin.h")
 target_include_directories(Gin PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src" PRIVATE ${IL_INCLUDE_DIR})

@@ -23,9 +23,11 @@ namespace Gin
 		MasterGame::MasterGame(float width, float height)
 		{
 			screen = new Screen(width, height);
-			inputProcessor = new Processor();
+			inputProcessor = new Processor(screen->window);
 
-			scene = new Scene();
+			scene = new Scene(
+
+			);
 
 			//In ticks 1/60 of a seconds.
 			TargetTimeStep = UPDATE_TIME_STEP;
@@ -61,11 +63,10 @@ namespace Gin
 				{ //Fixed time step
 
 					//Time since last time in ticks (1 second = 10,000,000 seconds)
-					CumulativeDt += static_cast<uint64_t>(dur.count() * TICKS_IN_SECOND);
+					CumulativeDt += dur.count();
 					while (CumulativeDt >= TargetTimeStep)
 					{
-						auto dt = static_cast<float>(TargetTimeStep / (TICKS_IN_SECOND * 1.0));
-						Update(inputProcessor, dt);
+						Update(inputProcessor, static_cast<float>(TargetTimeStep));
 						CumulativeDt -= TargetTimeStep;
 					}
 				}
@@ -99,14 +100,9 @@ namespace Gin
 			glfwTerminate();
 		}
 
-		void MasterGame::SetTimeStep(int ticks)
-		{
-			TargetTimeStep = ticks;
-		}
-
 		void MasterGame::SetTimeStep(double seconds)
 		{
-			TargetTimeStep = TICKS_IN_SECOND * seconds;
+			TargetTimeStep = seconds;
 		}
 	} // namespace Core
 } // namespace Gin

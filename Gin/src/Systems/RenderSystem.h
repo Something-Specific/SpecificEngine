@@ -5,5 +5,5 @@
 
 namespace Gin::ECS::Systems
 {
-    void RenderSystem(Graphics::Renderer *renderer, entt::registry &registry);
+    void RenderSystem(entt::registry &registry, Graphics::Renderer &renderer);
 }
