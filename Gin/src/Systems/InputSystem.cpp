@@ -28,6 +28,14 @@ namespace Gin::ECS::Systems
             {
                 transform.Position.x -= 1;
             }
+
+            
+            if (input.KeyboardState->IsKeyDown(Inputs::Keys::SPACE))
+            {
+                transform.Position.x = 0;
+                
+                transform.Position.y = 0;
+            }
         }
     };
 } // namespace Gin::ECS::Systems

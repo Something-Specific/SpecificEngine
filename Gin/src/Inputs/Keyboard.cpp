@@ -8,7 +8,7 @@ namespace Gin
 	{
 		Keyboard::Keyboard()
 		{
-			KeyStates = new bool[1024];
+			KeyStates = new bool[1024] {false};
 		}
 
 		void Keyboard::UpdateState(int key, int action)
