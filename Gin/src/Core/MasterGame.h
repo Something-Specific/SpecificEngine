@@ -6,6 +6,7 @@
 #include "..\Graphics\Screen.h"
 #include "..\Graphics\Renderer.h"
 #include "..\Inputs\Processor.h"
+#include "..\Inputs\Action.hpp"
 
 constexpr auto FPS_REFRESH_RATE = 0.25;
 // constexpr auto UPDATE_TIME_STEP = 0.016666666666666666; // 60hz
@@ -25,6 +26,8 @@ namespace Gin
 
 			void Run();
 			void SetTimeStep(double seconds);
+
+			void RegisterAction(Action action);
 
 			virtual void Update(Inputs::Processor *processor, float dt) {}
 			virtual void Render(Graphics::Renderer *renderer, float dt) {}

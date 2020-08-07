@@ -11,6 +11,7 @@ namespace Gin::ECS::Components
         Input() = default;
         Input(const Input &) = default;
 
+        std::map<std::string, short> Actions;
         //std::map<string, bool> Actions;
     };
 

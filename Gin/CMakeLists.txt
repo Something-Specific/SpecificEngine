@@ -35,6 +35,8 @@ add_library(Gin
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Inputs/Mouse.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Inputs/Processor.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Inputs/Processor.h"
+"${CMAKE_CURRENT_SOURCE_DIR}/src/Inputs/Action.hpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/src/Inputs/InputType.hpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/GinConfig.hpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/ResourceLoader.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/ResourceLoader.h"

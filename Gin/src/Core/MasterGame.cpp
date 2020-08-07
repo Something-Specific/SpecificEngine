@@ -104,5 +104,11 @@ namespace Gin
 		{
 			TargetTimeStep = seconds;
 		}
+
+		// Currently lets you add multiple actions with the same name
+		void MasterGame::RegisterAction(Action action)
+		{
+			inputProcessor->RegisteredActions.push_back(action);
+		}
 	} // namespace Core
 } // namespace Gin

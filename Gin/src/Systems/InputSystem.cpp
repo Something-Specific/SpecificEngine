@@ -1,40 +1,44 @@
 #include "InputSystem.h"
+#include "../Inputs/Action.hpp"
+#include "../Inputs/InputType.hpp"
+#include "../Inputs/Keys.h"
 
 namespace Gin::ECS::Systems
 {
     void InputSystem(entt::registry &registry, Inputs::Processor &input)
     {
-        auto controllable = registry.view<Components::Input, Components::Transform>();
-        for (auto entity : controllable)
-        {
-            auto &transform = controllable.get<Components::Transform>(entity);
+        
+        auto inputs = registry.view<Components::Input>();
 
-            if (input.KeyboardState->IsKeyDown(Inputs::Keys::W))
-            {
-                transform.Position.y -= 1;
-            }
+        // Check the input for each action registered
+        for(auto action : input.RegisteredActions) {
+            auto inputKey = action.Value;
+            short value = 0;
 
-            if (input.KeyboardState->IsKeyDown(Inputs::Keys::S))
-            {
-                transform.Position.y += 1;
-            }
+            // Read the physical input value
+            auto inputType = action.Type;
+            switch(inputType) {
+                case Inputs::KEYBOARD: {
+                    auto result = input.KeyboardState->IsKeyDown(static_cast<Inputs::Keys::Keys>(action.ID));
+                    value = result ? SHRT_MAX : 0;
+                }
+                break;
+                case Inputs::MOUSE:
+                    CORE_WARN("Input action registered for an unhandled InputType: MOUSE");
+                break;
+                case Inputs::GAMEPAD:
+                    CORE_WARN("Input action registered for an unhandled InputType: GAMEPAD");
+                break;
+                default:
+                    CORE_WARN("Input action registered for an unhandled InputType: UNKNOWN");
+                    continue;
+            };
 
-            if (input.KeyboardState->IsKeyDown(Inputs::Keys::D))
-            {
-                transform.Position.x += 1;
-            }
 
-            if (input.KeyboardState->IsKeyDown(Inputs::Keys::A))
-            {
-                transform.Position.x -= 1;
-            }
-
-            
-            if (input.KeyboardState->IsKeyDown(Inputs::Keys::SPACE))
-            {
-                transform.Position.x = 0;
-                
-                transform.Position.y = 0;
+            // Update all of the input components with the new value
+            for(auto entity : inputs) {
+                auto inputComponent = inputs.get(entity);
+                inputComponent.Actions[action.Name] = value;
             }
         }
     };
