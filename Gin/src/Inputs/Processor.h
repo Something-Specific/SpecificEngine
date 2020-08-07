@@ -5,6 +5,7 @@
 #include "Controller.h"
 #include "Keyboard.h"
 #include "Mouse.h"
+#include "Action.hpp"
 
 namespace Gin
 {
@@ -16,6 +17,7 @@ namespace Gin
 			Controller *ControllerState;
 			Keyboard *KeyboardState;
 			Mouse *MouseState;
+			std::vector<Action> RegisteredActions;
 
 			Processor(GLFWwindow *window);
 			~Processor();
