@@ -7,12 +7,12 @@ namespace Gin::ECS::Components
 {
     struct Body
     {
-        glm::vec2 Size;
+        glm::vec2 Velocity;
 
         Body() = default;
         Body(const Body &) = default;
-        Body(const glm::vec2 &size)
-            : Size(size) {}
+        Body(const glm::vec2 &velocity)
+            : Velocity(velocity) {}
     };
 
 } // namespace Gin::ECS::Components

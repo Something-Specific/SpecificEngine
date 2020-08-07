@@ -12,6 +12,7 @@ find_package(EnTT CONFIG REQUIRED)
 add_library(Gin 
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Gin.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Components/Body.hpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/src/Components/Collider.hpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Components/Transform.hpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Components/Sprite.hpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Core/MasterGame.cpp"
@@ -38,6 +39,8 @@ add_library(Gin
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/GinConfig.hpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/ResourceLoader.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/ResourceLoader.h"
+"${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/PhysicsSystem.cpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/PhysicsSystem.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Systems/RenderSystem.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Systems/RenderSystem.h"
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Systems/TestSystem.hpp"
