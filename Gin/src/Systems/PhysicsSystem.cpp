@@ -11,10 +11,22 @@ namespace Gin::ECS::Systems
 
             if (body.Velocity.x || body.Velocity.y)
             {
-                glm::vec2 newPos = transform.Position + body.Velocity;
+                bool collided = false;
+                glm::vec2 oldPos = transform.Position;
+                transform.Position += body.Velocity;
                 for (auto other : physical)
                 {
-                                }
+                    auto [oTransform, oCollider] = physical.get<Components::Transform, Components::Collider>(other);
+                    if (Math::IsColliding(transform, collider, oTransform, oCollider))
+                    {
+                        collided = true;
+                        break;
+                    }
+                }
+                if (collided)
+                {
+                    transform.Position = oldPos;
+                }
             }
         }
     };

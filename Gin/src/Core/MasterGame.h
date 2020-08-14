@@ -27,7 +27,7 @@ namespace Gin
 			void Run();
 			void SetTimeStep(double seconds);
 
-			void RegisterAction(Action action);
+			void RegisterAction(Inputs::Action action);
 
 			virtual void Update(Inputs::Processor *processor, float dt) {}
 			virtual void Render(Graphics::Renderer *renderer, float dt) {}

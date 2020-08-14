@@ -5,16 +5,21 @@
 
 namespace Gin::ECS::Components
 {
+    constexpr byte CIRCLE_TYPE = 1;
+    constexpr byte BOX_TYPE = 2;
+
     struct Collider
     {
-
-        virtual ~Collider(){};
+        byte Type;
+        virtual ~Collider() {};
     };
     struct CircleCollider : Collider
     {
         float Radius;
 
-        CircleCollider() = default;
+        CircleCollider() {
+            Type = CIRCLE_TYPE;
+        };
         CircleCollider(const CircleCollider &) = default;
         CircleCollider(const float &radius)
             : Radius(radius) {}
@@ -23,7 +28,9 @@ namespace Gin::ECS::Components
     {
         glm::vec2 Size;
 
-        BoxCollider() = default;
+        BoxCollider() {
+            Type = BOX_TYPE;
+        };
         BoxCollider(const BoxCollider &) = default;
         BoxCollider(const glm::vec2 &size)
             : Size(size) {}
